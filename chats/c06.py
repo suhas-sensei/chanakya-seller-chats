@@ -9,7 +9,7 @@ tracking stall, and a run of On Running orders where the shipping date has to be
 each time.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, open_rto, reminder
 
 CHAT = {
     "file": "c06", "id": 9006,
@@ -25,9 +25,8 @@ CHAT = {
         "resolution": "reshipped same day, all four cleared inside the week",
     },
     "turns": [
-        ("2026-09-01 19:16", "cx",
-         "hey Dipanshu, chanakya from sourcex. order SX315558 got RTO'd, AWB "
-         "19041902816422. did you receive it back? will you reship or whats the plan?"),
+        ("2026-09-01 19:15", "cx", intro("Dipanshu")),
+        ("2026-09-01 19:16", "cx", open_rto("SX315558", "19041902816422")),
         ("2026-09-01 19:18", "sl", "Will check tom"),
         ("2026-09-01 19:22", "cx", "cool, waiting for your update tomorrow"),
         ("2026-09-02 11:00", "cx", "any update?"),

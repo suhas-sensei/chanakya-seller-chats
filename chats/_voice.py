@@ -88,6 +88,53 @@ ORDER_BRIEF = (
     "to *instant lifetime ban* from SourceX.")
 
 
+# HOW CHANAKYA OPENS
+#
+# Always formal, always the same three beats: who he is, which order, what he needs. Taken
+# from the live templates in `backend/src/rubberstate/agent/templates.py` and from how the
+# formal ops register reads in the exports.
+#
+# Only the opening. Once the seller replies the register drops to terse Hinglish and stays
+# there, and comes back to formal only when something becomes disputable: a penalty, an SLA
+# breach, a lost parcel.
+
+INTRO = ("Hi {name}, this is Chanakya from SourceX. I look after seller orders for "
+         "Culture Circle.")
+
+OPEN_UPDATE = ("About order {sx}, {product}. When are you shipping it? The customer is "
+               "waiting, so please share an update.")
+
+OPEN_URGENT = ("A gentle request about order {sx} ({product}). The customer has an urgent "
+               "requirement and has requested delivery by {by}. Could you please help us "
+               "fulfil this in time? When is the earliest you can ship this order? "
+               "Thank you!")
+
+OPEN_CONFIRM = "Could you please confirm the estimated shipping date for order {sx}, {product}."
+
+OPEN_RTO = ("Order {sx} has been returned to origin. AWB {awb}. Could you please confirm "
+            "whether you have received it back, and whether you intend to reship?")
+
+
+def intro(name):
+    return INTRO.format(name=name)
+
+
+def open_update(sx, product):
+    return OPEN_UPDATE.format(sx=sx, product=product)
+
+
+def open_urgent(sx, product, by):
+    return OPEN_URGENT.format(sx=sx, product=product, by=by)
+
+
+def open_confirm(sx, product):
+    return OPEN_CONFIRM.format(sx=sx, product=product)
+
+
+def open_rto(sx, awb):
+    return OPEN_RTO.format(sx=sx, awb=awb)
+
+
 def reminder(id_, product, size):
     return REMINDER.format(id=id_, product=product, size=size)
 

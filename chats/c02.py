@@ -8,7 +8,7 @@ confirmed three days later, then straight into the open orders. Bulk list of fiv
 lands short and two customers get a choice.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, open_update, reminder
 
 CHAT = {
     "file": "c02", "id": 9002,
@@ -25,6 +25,10 @@ CHAT = {
         "resolution": "payout ran, four shipped, one cancelled clean",
     },
     "turns": [
+        ("2026-08-18 16:20", "cx", intro("Delicc Enterprises")),
+        ("2026-08-18 16:21", "cx",
+         open_update("SX330749", "Off supply Always In Motion Blue T-shirt")),
+        ("2026-08-18 17:05", "sl", "Noted sir, will check and revert"),
         ("2026-08-19 10:02", "sl", "Hi sir, pls process payout of 3 delivered orders"),
         ("2026-08-19 10:02", "sl", "SX310920 SX310921 SX313055"),
         ("2026-08-19 10:02", "sl", "It is pending from 2 weeks 🙏"),

@@ -8,7 +8,7 @@ complete, the three day follow up to confirm the money landed, then the open ord
 tracking feed lag that was our problem, not his.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, open_confirm, reminder
 
 CHAT = {
     "file": "c04", "id": 9004,
@@ -24,8 +24,12 @@ CHAT = {
         "resolution": "payout received, order shipped same evening, feed lag fixed our side",
     },
     "turns": [
-        ("2026-08-26 12:10", "cx", "hello bhai"),
-        ("2026-08-26 12:10", "cx", "Ahmed Al Maghribi Kaaf EDP - do you have this?"),
+        ("2026-08-26 12:08", "cx", intro("Mindyourkicks")),
+        ("2026-08-26 12:09", "cx",
+         open_confirm("SX335948", "Ajmal Aristocrat EDP for Men")),
+        ("2026-08-26 12:22", "sl", "Wo kal nikal gaya tha.. tracking daal di thi"),
+        ("2026-08-26 12:24", "cx", "mil gaya, thanks"),
+        ("2026-08-26 12:30", "cx", "Ahmed Al Maghribi Kaaf EDP - do you have this?"),
         ("2026-08-26 12:34", "sl", "Hnji.. 2 piece hai"),
         ("2026-08-26 12:35", "cx", "payout?"),
         ("2026-08-26 12:40", "sl", "3800"),

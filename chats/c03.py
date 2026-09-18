@@ -8,7 +8,7 @@ into the night, orders auto cancelling because app alerts were not arriving, and
 listing clean up that follows from it.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, reminder
 
 CHAT = {
     "file": "c03", "id": 9003,
@@ -25,9 +25,7 @@ CHAT = {
         "resolution": "auto cancels reversed out of his rate, all six shipped",
     },
     "turns": [
-        ("2026-08-20 11:05", "cx",
-         "Hello, Chanakya from SourceX here. I will be handling your order follow ups going "
-         "forward."),
+        ("2026-08-20 11:05", "cx", intro("DS.WT")),
         ("2026-08-20 11:06", "cx",
          "Kindly note SX324592 was auto cancelled this morning as it was not accepted "
          "within 24 hours. Could you tell me if there was an issue at your end?"),

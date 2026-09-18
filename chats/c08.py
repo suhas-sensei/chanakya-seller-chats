@@ -8,7 +8,7 @@ the penalty rule spelled out formally, an address change caught before the label
 tracking, and the listing fix that stops it recurring.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, open_confirm, reminder
 
 CHAT = {
     "file": "c08", "id": 9008,
@@ -24,11 +24,9 @@ CHAT = {
         "resolution": "two cancelled without penalty, dispatch and SLA recovering",
     },
     "turns": [
-        ("2026-08-14 10:30", "cx",
-         "Hello, Chanakya from SourceX. I will be looking after your order follow ups."),
+        ("2026-08-14 10:30", "cx", intro("DJ1")),
         ("2026-08-14 10:31", "cx",
-         "Can you please confirm the estimated shipping date for SX314813, Seiko Mod Santos "
-         "Silver Fume."),
+         open_confirm("SX314813", "Seiko Mod Santos Silver Fume")),
         ("2026-08-14 11:20", "sl", "Call kru?"),
         ("2026-08-14 11:22", "cx",
          "chat pe hi bata dijiye, mujhe record rakhna hota hai. bas date chahiye"),

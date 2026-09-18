@@ -29,8 +29,17 @@ enough to read. `chats/_voice.py` holds the full voice reference, quoted from th
 
 ## Chanakya has two registers and switches between them
 
-**Formal** opens a relationship and comes back whenever it turns serious — penalties, SLA
-breaches, a lost parcel, anything a seller might later dispute:
+**Formal** opens *every* thread, and comes back whenever it turns serious — penalties, SLA
+breaches, a lost parcel, anything a seller might later dispute. The opener is always the
+same three beats, from `chats/_voice.py`: who he is, which order, what he needs.
+
+> Hi TopGun, this is Chanakya from SourceX. I look after seller orders for Culture Circle.
+>
+> A gentle request about order SX316819 (Seiko Mod GMT Gold). The customer has an urgent
+> requirement and has requested delivery by 17 September. Could you please help us fulfil
+> this in time? When is the earliest you can ship this order? Thank you!
+
+It drops to Hinglish on the second or third exchange and stays there:
 
 > Can you please confirm the estimated shipping date for order SX333916.
 >

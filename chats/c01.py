@@ -7,7 +7,7 @@ Episodes: formal open + REMINDER, a date that slips, the reputation and PDP nego
 a bulk list of four, an SLA warning in the formal register, resolution.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, open_confirm, reminder
 
 GF = "Nike Gamma Force (W) 'White & Pink'"
 
@@ -25,10 +25,8 @@ CHAT = {
         "resolution": "four out that week, SLA breach down from 9 to 2",
     },
     "turns": [
-        ("2026-08-24 11:40", "cx",
-         "Hello, this is Chanakya from SourceX. I handle seller orders for Culture Circle."),
-        ("2026-08-24 11:41", "cx",
-         "Can you please confirm the estimated shipping date for order SX333916."),
+        ("2026-08-24 11:40", "cx", intro("ELITE FINDS")),
+        ("2026-08-24 11:41", "cx", open_confirm("SX333916", GF)),
         ("2026-08-24 11:41", "tpl", reminder("333916", GF, "UK5")),
         ("2026-08-24 12:15", "sl", "Checking"),
         ("2026-08-24 12:15", "sl", "2 min"),

@@ -16,7 +16,7 @@
    "support_count": 27,
    "human_count": 0,
    "substantive_customer": 8,
-   "characters": 2003,
+   "characters": 2055,
    "first_message_at": "2026-08-24 11:40:00+05:30",
    "nps_n": 1,
    "label": "Chat 001",
@@ -27,7 +27,7 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Hello, this is Chanakya from SourceX. I handle seller orders for Culture Circle.",
+     "text": "Hi ELITE FINDS, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
      "created_at": "2026-08-24 11:40:00+05:30",
      "media_id": null,
      "operator_name": null,
@@ -38,7 +38,7 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Can you please confirm the estimated shipping date for order SX333916.",
+     "text": "Could you please confirm the estimated shipping date for order SX333916, Nike Gamma Force (W) 'White & Pink'.",
      "created_at": "2026-08-24 11:41:00+05:30",
      "media_id": null,
      "operator_name": null,
@@ -662,19 +662,52 @@
    "cohort": "agentic",
    "customer_name": "Delicc Enterprises",
    "agent_name": null,
-   "message_count": 55,
-   "customer_count": 28,
-   "support_count": 27,
+   "message_count": 58,
+   "customer_count": 29,
+   "support_count": 29,
    "human_count": 0,
-   "substantive_customer": 21,
-   "characters": 2754,
-   "first_message_at": "2026-08-19 10:02:00+05:30",
+   "substantive_customer": 22,
+   "characters": 3027,
+   "first_message_at": "2026-08-18 16:20:00+05:30",
    "nps_n": 1,
    "label": "Chat 002",
    "quality": "exceptional",
    "messages": [
     {
      "id": 9002000,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Hi Delicc Enterprises, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
+     "created_at": "2026-08-18 16:20:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9002001,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "About order SX330749, Off supply Always In Motion Blue T-shirt. When are you shipping it? The customer is waiting, so please share an update.",
+     "created_at": "2026-08-18 16:21:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9002002,
+     "author": "customer",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Noted sir, will check and revert",
+     "created_at": "2026-08-18 17:05:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9002003,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -685,7 +718,7 @@
      "interactive": null
     },
     {
-     "id": 9002001,
+     "id": 9002004,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -696,7 +729,7 @@
      "interactive": null
     },
     {
-     "id": 9002002,
+     "id": 9002005,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -707,7 +740,7 @@
      "interactive": null
     },
     {
-     "id": 9002003,
+     "id": 9002006,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -718,7 +751,7 @@
      "interactive": null
     },
     {
-     "id": 9002004,
+     "id": 9002007,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -729,7 +762,7 @@
      "interactive": null
     },
     {
-     "id": 9002005,
+     "id": 9002008,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -740,7 +773,7 @@
      "interactive": null
     },
     {
-     "id": 9002006,
+     "id": 9002009,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -751,7 +784,7 @@
      "interactive": null
     },
     {
-     "id": 9002007,
+     "id": 9002010,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -762,7 +795,7 @@
      "interactive": null
     },
     {
-     "id": 9002008,
+     "id": 9002011,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -773,7 +806,7 @@
      "interactive": null
     },
     {
-     "id": 9002009,
+     "id": 9002012,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -784,7 +817,7 @@
      "interactive": null
     },
     {
-     "id": 9002010,
+     "id": 9002013,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -795,7 +828,7 @@
      "interactive": null
     },
     {
-     "id": 9002011,
+     "id": 9002014,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -806,7 +839,7 @@
      "interactive": null
     },
     {
-     "id": 9002012,
+     "id": 9002015,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -817,7 +850,7 @@
      "interactive": null
     },
     {
-     "id": 9002013,
+     "id": 9002016,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -828,7 +861,7 @@
      "interactive": null
     },
     {
-     "id": 9002014,
+     "id": 9002017,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -839,7 +872,7 @@
      "interactive": null
     },
     {
-     "id": 9002015,
+     "id": 9002018,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -850,7 +883,7 @@
      "interactive": null
     },
     {
-     "id": 9002016,
+     "id": 9002019,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -861,7 +894,7 @@
      "interactive": null
     },
     {
-     "id": 9002017,
+     "id": 9002020,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -872,7 +905,7 @@
      "interactive": null
     },
     {
-     "id": 9002018,
+     "id": 9002021,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -883,7 +916,7 @@
      "interactive": null
     },
     {
-     "id": 9002019,
+     "id": 9002022,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -894,7 +927,7 @@
      "interactive": null
     },
     {
-     "id": 9002020,
+     "id": 9002023,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -905,7 +938,7 @@
      "interactive": null
     },
     {
-     "id": 9002021,
+     "id": 9002024,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -916,7 +949,7 @@
      "interactive": null
     },
     {
-     "id": 9002022,
+     "id": 9002025,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -927,7 +960,7 @@
      "interactive": null
     },
     {
-     "id": 9002023,
+     "id": 9002026,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -938,7 +971,7 @@
      "interactive": null
     },
     {
-     "id": 9002024,
+     "id": 9002027,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -949,7 +982,7 @@
      "interactive": null
     },
     {
-     "id": 9002025,
+     "id": 9002028,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -960,7 +993,7 @@
      "interactive": null
     },
     {
-     "id": 9002026,
+     "id": 9002029,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -971,7 +1004,7 @@
      "interactive": null
     },
     {
-     "id": 9002027,
+     "id": 9002030,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -988,7 +1021,7 @@
      }
     },
     {
-     "id": 9002028,
+     "id": 9002031,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -999,7 +1032,7 @@
      "interactive": null
     },
     {
-     "id": 9002029,
+     "id": 9002032,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1010,7 +1043,7 @@
      "interactive": null
     },
     {
-     "id": 9002030,
+     "id": 9002033,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1021,7 +1054,7 @@
      "interactive": null
     },
     {
-     "id": 9002031,
+     "id": 9002034,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1032,7 +1065,7 @@
      "interactive": null
     },
     {
-     "id": 9002032,
+     "id": 9002035,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1043,7 +1076,7 @@
      "interactive": null
     },
     {
-     "id": 9002033,
+     "id": 9002036,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1054,7 +1087,7 @@
      "interactive": null
     },
     {
-     "id": 9002034,
+     "id": 9002037,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1065,7 +1098,7 @@
      "interactive": null
     },
     {
-     "id": 9002035,
+     "id": 9002038,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1076,7 +1109,7 @@
      "interactive": null
     },
     {
-     "id": 9002036,
+     "id": 9002039,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1087,7 +1120,7 @@
      "interactive": null
     },
     {
-     "id": 9002037,
+     "id": 9002040,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1098,7 +1131,7 @@
      "interactive": null
     },
     {
-     "id": 9002038,
+     "id": 9002041,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1109,7 +1142,7 @@
      "interactive": null
     },
     {
-     "id": 9002039,
+     "id": 9002042,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1120,7 +1153,7 @@
      "interactive": null
     },
     {
-     "id": 9002040,
+     "id": 9002043,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1131,7 +1164,7 @@
      "interactive": null
     },
     {
-     "id": 9002041,
+     "id": 9002044,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1142,7 +1175,7 @@
      "interactive": null
     },
     {
-     "id": 9002042,
+     "id": 9002045,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1153,7 +1186,7 @@
      "interactive": null
     },
     {
-     "id": 9002043,
+     "id": 9002046,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1164,7 +1197,7 @@
      "interactive": null
     },
     {
-     "id": 9002044,
+     "id": 9002047,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1175,7 +1208,7 @@
      "interactive": null
     },
     {
-     "id": 9002045,
+     "id": 9002048,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1186,7 +1219,7 @@
      "interactive": null
     },
     {
-     "id": 9002046,
+     "id": 9002049,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1197,7 +1230,7 @@
      "interactive": null
     },
     {
-     "id": 9002047,
+     "id": 9002050,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1208,7 +1241,7 @@
      "interactive": null
     },
     {
-     "id": 9002048,
+     "id": 9002051,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1219,7 +1252,7 @@
      "interactive": null
     },
     {
-     "id": 9002049,
+     "id": 9002052,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1230,7 +1263,7 @@
      "interactive": null
     },
     {
-     "id": 9002050,
+     "id": 9002053,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1241,7 +1274,7 @@
      "interactive": null
     },
     {
-     "id": 9002051,
+     "id": 9002054,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1252,7 +1285,7 @@
      "interactive": null
     },
     {
-     "id": 9002052,
+     "id": 9002055,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -1269,7 +1302,7 @@
      }
     },
     {
-     "id": 9002053,
+     "id": 9002056,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -1280,7 +1313,7 @@
      "interactive": null
     },
     {
-     "id": 9002054,
+     "id": 9002057,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -1323,15 +1356,15 @@
     "resolution": "payout ran, four shipped, one cancelled clean"
    },
    "template": {
-    "n": 55,
+    "n": 58,
     "src_id": null,
     "src_name": "written to the flow",
     "src_score": null,
     "src_cohort": "agentic",
-    "days": 9,
-    "starts": "2026-08-19",
+    "days": 10,
+    "starts": "2026-08-18",
     "ends": "2026-09-15",
-    "span_days": 28,
+    "span_days": 29,
     "src_starts": null,
     "src_ends": null
    }
@@ -1351,7 +1384,7 @@
    "support_count": 36,
    "human_count": 0,
    "substantive_customer": 20,
-   "characters": 3586,
+   "characters": 3583,
    "first_message_at": "2026-08-20 11:05:00+05:30",
    "nps_n": 1,
    "label": "Chat 003",
@@ -1362,7 +1395,7 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Hello, Chanakya from SourceX here. I will be handling your order follow ups going forward.",
+     "text": "Hi DS.WT, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
      "created_at": "2026-08-20 11:05:00+05:30",
      "media_id": null,
      "operator_name": null,
@@ -2178,13 +2211,13 @@
    "cohort": "agentic",
    "customer_name": "Mindyourkicks",
    "agent_name": null,
-   "message_count": 75,
-   "customer_count": 35,
-   "support_count": 40,
+   "message_count": 78,
+   "customer_count": 36,
+   "support_count": 42,
    "human_count": 0,
-   "substantive_customer": 18,
-   "characters": 2760,
-   "first_message_at": "2026-08-26 12:10:00+05:30",
+   "substantive_customer": 19,
+   "characters": 3007,
+   "first_message_at": "2026-08-26 12:08:00+05:30",
    "nps_n": 1,
    "label": "Chat 004",
    "quality": "exceptional",
@@ -2194,8 +2227,8 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "hello bhai",
-     "created_at": "2026-08-26 12:10:00+05:30",
+     "text": "Hi Mindyourkicks, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
+     "created_at": "2026-08-26 12:08:00+05:30",
      "media_id": null,
      "operator_name": null,
      "interactive": null
@@ -2205,14 +2238,47 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Ahmed Al Maghribi Kaaf EDP - do you have this?",
-     "created_at": "2026-08-26 12:10:00+05:30",
+     "text": "Could you please confirm the estimated shipping date for order SX335948, Ajmal Aristocrat EDP for Men.",
+     "created_at": "2026-08-26 12:09:00+05:30",
      "media_id": null,
      "operator_name": null,
      "interactive": null
     },
     {
      "id": 9004002,
+     "author": "customer",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Wo kal nikal gaya tha.. tracking daal di thi",
+     "created_at": "2026-08-26 12:22:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9004003,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "mil gaya, thanks",
+     "created_at": "2026-08-26 12:24:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9004004,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Ahmed Al Maghribi Kaaf EDP - do you have this?",
+     "created_at": "2026-08-26 12:30:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9004005,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2223,7 +2289,7 @@
      "interactive": null
     },
     {
-     "id": 9004003,
+     "id": 9004006,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2234,7 +2300,7 @@
      "interactive": null
     },
     {
-     "id": 9004004,
+     "id": 9004007,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2245,7 +2311,7 @@
      "interactive": null
     },
     {
-     "id": 9004005,
+     "id": 9004008,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2256,7 +2322,7 @@
      "interactive": null
     },
     {
-     "id": 9004006,
+     "id": 9004009,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2267,7 +2333,7 @@
      "interactive": null
     },
     {
-     "id": 9004007,
+     "id": 9004010,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2278,7 +2344,7 @@
      "interactive": null
     },
     {
-     "id": 9004008,
+     "id": 9004011,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -2295,7 +2361,7 @@
      }
     },
     {
-     "id": 9004009,
+     "id": 9004012,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2306,7 +2372,7 @@
      "interactive": null
     },
     {
-     "id": 9004010,
+     "id": 9004013,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2317,7 +2383,7 @@
      "interactive": null
     },
     {
-     "id": 9004011,
+     "id": 9004014,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2328,7 +2394,7 @@
      "interactive": null
     },
     {
-     "id": 9004012,
+     "id": 9004015,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2339,7 +2405,7 @@
      "interactive": null
     },
     {
-     "id": 9004013,
+     "id": 9004016,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2350,7 +2416,7 @@
      "interactive": null
     },
     {
-     "id": 9004014,
+     "id": 9004017,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2361,7 +2427,7 @@
      "interactive": null
     },
     {
-     "id": 9004015,
+     "id": 9004018,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2372,7 +2438,7 @@
      "interactive": null
     },
     {
-     "id": 9004016,
+     "id": 9004019,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2383,7 +2449,7 @@
      "interactive": null
     },
     {
-     "id": 9004017,
+     "id": 9004020,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2394,7 +2460,7 @@
      "interactive": null
     },
     {
-     "id": 9004018,
+     "id": 9004021,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2405,7 +2471,7 @@
      "interactive": null
     },
     {
-     "id": 9004019,
+     "id": 9004022,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2416,7 +2482,7 @@
      "interactive": null
     },
     {
-     "id": 9004020,
+     "id": 9004023,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2427,7 +2493,7 @@
      "interactive": null
     },
     {
-     "id": 9004021,
+     "id": 9004024,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2438,7 +2504,7 @@
      "interactive": null
     },
     {
-     "id": 9004022,
+     "id": 9004025,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2449,7 +2515,7 @@
      "interactive": null
     },
     {
-     "id": 9004023,
+     "id": 9004026,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2460,7 +2526,7 @@
      "interactive": null
     },
     {
-     "id": 9004024,
+     "id": 9004027,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2471,7 +2537,7 @@
      "interactive": null
     },
     {
-     "id": 9004025,
+     "id": 9004028,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2482,7 +2548,7 @@
      "interactive": null
     },
     {
-     "id": 9004026,
+     "id": 9004029,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2493,7 +2559,7 @@
      "interactive": null
     },
     {
-     "id": 9004027,
+     "id": 9004030,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2504,7 +2570,7 @@
      "interactive": null
     },
     {
-     "id": 9004028,
+     "id": 9004031,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2515,7 +2581,7 @@
      "interactive": null
     },
     {
-     "id": 9004029,
+     "id": 9004032,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2526,7 +2592,7 @@
      "interactive": null
     },
     {
-     "id": 9004030,
+     "id": 9004033,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2537,7 +2603,7 @@
      "interactive": null
     },
     {
-     "id": 9004031,
+     "id": 9004034,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2548,7 +2614,7 @@
      "interactive": null
     },
     {
-     "id": 9004032,
+     "id": 9004035,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2559,7 +2625,7 @@
      "interactive": null
     },
     {
-     "id": 9004033,
+     "id": 9004036,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2570,7 +2636,7 @@
      "interactive": null
     },
     {
-     "id": 9004034,
+     "id": 9004037,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2581,7 +2647,7 @@
      "interactive": null
     },
     {
-     "id": 9004035,
+     "id": 9004038,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2592,7 +2658,7 @@
      "interactive": null
     },
     {
-     "id": 9004036,
+     "id": 9004039,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2603,7 +2669,7 @@
      "interactive": null
     },
     {
-     "id": 9004037,
+     "id": 9004040,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2614,7 +2680,7 @@
      "interactive": null
     },
     {
-     "id": 9004038,
+     "id": 9004041,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2625,7 +2691,7 @@
      "interactive": null
     },
     {
-     "id": 9004039,
+     "id": 9004042,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2636,7 +2702,7 @@
      "interactive": null
     },
     {
-     "id": 9004040,
+     "id": 9004043,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2647,7 +2713,7 @@
      "interactive": null
     },
     {
-     "id": 9004041,
+     "id": 9004044,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2658,7 +2724,7 @@
      "interactive": null
     },
     {
-     "id": 9004042,
+     "id": 9004045,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2669,7 +2735,7 @@
      "interactive": null
     },
     {
-     "id": 9004043,
+     "id": 9004046,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2680,7 +2746,7 @@
      "interactive": null
     },
     {
-     "id": 9004044,
+     "id": 9004047,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2691,7 +2757,7 @@
      "interactive": null
     },
     {
-     "id": 9004045,
+     "id": 9004048,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2702,7 +2768,7 @@
      "interactive": null
     },
     {
-     "id": 9004046,
+     "id": 9004049,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2713,7 +2779,7 @@
      "interactive": null
     },
     {
-     "id": 9004047,
+     "id": 9004050,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2724,7 +2790,7 @@
      "interactive": null
     },
     {
-     "id": 9004048,
+     "id": 9004051,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2735,7 +2801,7 @@
      "interactive": null
     },
     {
-     "id": 9004049,
+     "id": 9004052,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2746,7 +2812,7 @@
      "interactive": null
     },
     {
-     "id": 9004050,
+     "id": 9004053,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2757,7 +2823,7 @@
      "interactive": null
     },
     {
-     "id": 9004051,
+     "id": 9004054,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2768,7 +2834,7 @@
      "interactive": null
     },
     {
-     "id": 9004052,
+     "id": 9004055,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2779,7 +2845,7 @@
      "interactive": null
     },
     {
-     "id": 9004053,
+     "id": 9004056,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2790,7 +2856,7 @@
      "interactive": null
     },
     {
-     "id": 9004054,
+     "id": 9004057,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2801,7 +2867,7 @@
      "interactive": null
     },
     {
-     "id": 9004055,
+     "id": 9004058,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2812,7 +2878,7 @@
      "interactive": null
     },
     {
-     "id": 9004056,
+     "id": 9004059,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -2829,7 +2895,7 @@
      }
     },
     {
-     "id": 9004057,
+     "id": 9004060,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2840,7 +2906,7 @@
      "interactive": null
     },
     {
-     "id": 9004058,
+     "id": 9004061,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2851,7 +2917,7 @@
      "interactive": null
     },
     {
-     "id": 9004059,
+     "id": 9004062,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2862,7 +2928,7 @@
      "interactive": null
     },
     {
-     "id": 9004060,
+     "id": 9004063,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2873,7 +2939,7 @@
      "interactive": null
     },
     {
-     "id": 9004061,
+     "id": 9004064,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2884,7 +2950,7 @@
      "interactive": null
     },
     {
-     "id": 9004062,
+     "id": 9004065,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2895,7 +2961,7 @@
      "interactive": null
     },
     {
-     "id": 9004063,
+     "id": 9004066,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2906,7 +2972,7 @@
      "interactive": null
     },
     {
-     "id": 9004064,
+     "id": 9004067,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2917,7 +2983,7 @@
      "interactive": null
     },
     {
-     "id": 9004065,
+     "id": 9004068,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2928,7 +2994,7 @@
      "interactive": null
     },
     {
-     "id": 9004066,
+     "id": 9004069,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2939,7 +3005,7 @@
      "interactive": null
     },
     {
-     "id": 9004067,
+     "id": 9004070,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2950,7 +3016,7 @@
      "interactive": null
     },
     {
-     "id": 9004068,
+     "id": 9004071,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2961,7 +3027,7 @@
      "interactive": null
     },
     {
-     "id": 9004069,
+     "id": 9004072,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2972,7 +3038,7 @@
      "interactive": null
     },
     {
-     "id": 9004070,
+     "id": 9004073,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -2983,7 +3049,7 @@
      "interactive": null
     },
     {
-     "id": 9004071,
+     "id": 9004074,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -2994,7 +3060,7 @@
      "interactive": null
     },
     {
-     "id": 9004072,
+     "id": 9004075,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3005,7 +3071,7 @@
      "interactive": null
     },
     {
-     "id": 9004073,
+     "id": 9004076,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3016,7 +3082,7 @@
      "interactive": null
     },
     {
-     "id": 9004074,
+     "id": 9004077,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3059,7 +3125,7 @@
     "resolution": "payout received, order shipped same evening, feed lag fixed our side"
    },
    "template": {
-    "n": 75,
+    "n": 78,
     "src_id": null,
     "src_name": "written to the flow",
     "src_score": null,
@@ -3082,19 +3148,41 @@
    "cohort": "agentic",
    "customer_name": "Sneak Drip",
    "agent_name": null,
-   "message_count": 66,
+   "message_count": 68,
    "customer_count": 32,
-   "support_count": 34,
+   "support_count": 36,
    "human_count": 3,
    "substantive_customer": 21,
-   "characters": 3429,
-   "first_message_at": "2026-08-18 15:20:00+05:30",
+   "characters": 3662,
+   "first_message_at": "2026-08-18 11:30:00+05:30",
    "nps_n": 1,
    "label": "Chat 005",
    "quality": "exceptional",
    "messages": [
     {
      "id": 9005000,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Hi Sneak Drip, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
+     "created_at": "2026-08-18 11:30:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9005001,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "About order SX325430, ALL SAINTS Xander Flocked Logo Oversized. When are you shipping it? The customer is waiting, so please share an update.",
+     "created_at": "2026-08-18 11:31:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9005002,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3105,7 +3193,7 @@
      "interactive": null
     },
     {
-     "id": 9005001,
+     "id": 9005003,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3116,7 +3204,7 @@
      "interactive": null
     },
     {
-     "id": 9005002,
+     "id": 9005004,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3127,7 +3215,7 @@
      "interactive": null
     },
     {
-     "id": 9005003,
+     "id": 9005005,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3138,7 +3226,7 @@
      "interactive": null
     },
     {
-     "id": 9005004,
+     "id": 9005006,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3149,7 +3237,7 @@
      "interactive": null
     },
     {
-     "id": 9005005,
+     "id": 9005007,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3160,7 +3248,7 @@
      "interactive": null
     },
     {
-     "id": 9005006,
+     "id": 9005008,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3171,7 +3259,7 @@
      "interactive": null
     },
     {
-     "id": 9005007,
+     "id": 9005009,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3182,7 +3270,7 @@
      "interactive": null
     },
     {
-     "id": 9005008,
+     "id": 9005010,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3193,7 +3281,7 @@
      "interactive": null
     },
     {
-     "id": 9005009,
+     "id": 9005011,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3204,7 +3292,7 @@
      "interactive": null
     },
     {
-     "id": 9005010,
+     "id": 9005012,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3215,7 +3303,7 @@
      "interactive": null
     },
     {
-     "id": 9005011,
+     "id": 9005013,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3226,7 +3314,7 @@
      "interactive": null
     },
     {
-     "id": 9005012,
+     "id": 9005014,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3237,7 +3325,7 @@
      "interactive": null
     },
     {
-     "id": 9005013,
+     "id": 9005015,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3248,7 +3336,7 @@
      "interactive": null
     },
     {
-     "id": 9005014,
+     "id": 9005016,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3259,7 +3347,7 @@
      "interactive": null
     },
     {
-     "id": 9005015,
+     "id": 9005017,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3270,7 +3358,7 @@
      "interactive": null
     },
     {
-     "id": 9005016,
+     "id": 9005018,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3281,7 +3369,7 @@
      "interactive": null
     },
     {
-     "id": 9005017,
+     "id": 9005019,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3292,7 +3380,7 @@
      "interactive": null
     },
     {
-     "id": 9005018,
+     "id": 9005020,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3303,7 +3391,7 @@
      "interactive": null
     },
     {
-     "id": 9005019,
+     "id": 9005021,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3314,7 +3402,7 @@
      "interactive": null
     },
     {
-     "id": 9005020,
+     "id": 9005022,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3325,7 +3413,7 @@
      "interactive": null
     },
     {
-     "id": 9005021,
+     "id": 9005023,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3336,7 +3424,7 @@
      "interactive": null
     },
     {
-     "id": 9005022,
+     "id": 9005024,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3347,7 +3435,7 @@
      "interactive": null
     },
     {
-     "id": 9005023,
+     "id": 9005025,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3358,7 +3446,7 @@
      "interactive": null
     },
     {
-     "id": 9005024,
+     "id": 9005026,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3369,7 +3457,7 @@
      "interactive": null
     },
     {
-     "id": 9005025,
+     "id": 9005027,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3380,7 +3468,7 @@
      "interactive": null
     },
     {
-     "id": 9005026,
+     "id": 9005028,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3391,7 +3479,7 @@
      "interactive": null
     },
     {
-     "id": 9005027,
+     "id": 9005029,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3402,7 +3490,7 @@
      "interactive": null
     },
     {
-     "id": 9005028,
+     "id": 9005030,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3413,7 +3501,7 @@
      "interactive": null
     },
     {
-     "id": 9005029,
+     "id": 9005031,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3424,7 +3512,7 @@
      "interactive": null
     },
     {
-     "id": 9005030,
+     "id": 9005032,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3435,7 +3523,7 @@
      "interactive": null
     },
     {
-     "id": 9005031,
+     "id": 9005033,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3446,7 +3534,7 @@
      "interactive": null
     },
     {
-     "id": 9005032,
+     "id": 9005034,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3457,7 +3545,7 @@
      "interactive": null
     },
     {
-     "id": 9005033,
+     "id": 9005035,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3468,7 +3556,7 @@
      "interactive": null
     },
     {
-     "id": 9005034,
+     "id": 9005036,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3479,7 +3567,7 @@
      "interactive": null
     },
     {
-     "id": 9005035,
+     "id": 9005037,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3490,7 +3578,7 @@
      "interactive": null
     },
     {
-     "id": 9005036,
+     "id": 9005038,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3501,7 +3589,7 @@
      "interactive": null
     },
     {
-     "id": 9005037,
+     "id": 9005039,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3512,7 +3600,7 @@
      "interactive": null
     },
     {
-     "id": 9005038,
+     "id": 9005040,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3523,7 +3611,7 @@
      "interactive": null
     },
     {
-     "id": 9005039,
+     "id": 9005041,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3534,7 +3622,7 @@
      "interactive": null
     },
     {
-     "id": 9005040,
+     "id": 9005042,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3545,7 +3633,7 @@
      "interactive": null
     },
     {
-     "id": 9005041,
+     "id": 9005043,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3556,7 +3644,7 @@
      "interactive": null
     },
     {
-     "id": 9005042,
+     "id": 9005044,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3567,7 +3655,7 @@
      "interactive": null
     },
     {
-     "id": 9005043,
+     "id": 9005045,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3578,7 +3666,7 @@
      "interactive": null
     },
     {
-     "id": 9005044,
+     "id": 9005046,
      "author": "human",
      "kind": "text",
      "role": "assistant",
@@ -3589,7 +3677,7 @@
      "interactive": null
     },
     {
-     "id": 9005045,
+     "id": 9005047,
      "author": "human",
      "kind": "text",
      "role": "assistant",
@@ -3600,7 +3688,7 @@
      "interactive": null
     },
     {
-     "id": 9005046,
+     "id": 9005048,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3611,7 +3699,7 @@
      "interactive": null
     },
     {
-     "id": 9005047,
+     "id": 9005049,
      "author": "human",
      "kind": "text",
      "role": "assistant",
@@ -3622,7 +3710,7 @@
      "interactive": null
     },
     {
-     "id": 9005048,
+     "id": 9005050,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3633,7 +3721,7 @@
      "interactive": null
     },
     {
-     "id": 9005049,
+     "id": 9005051,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3644,7 +3732,7 @@
      "interactive": null
     },
     {
-     "id": 9005050,
+     "id": 9005052,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3655,7 +3743,7 @@
      "interactive": null
     },
     {
-     "id": 9005051,
+     "id": 9005053,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3666,7 +3754,7 @@
      "interactive": null
     },
     {
-     "id": 9005052,
+     "id": 9005054,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3677,7 +3765,7 @@
      "interactive": null
     },
     {
-     "id": 9005053,
+     "id": 9005055,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3688,7 +3776,7 @@
      "interactive": null
     },
     {
-     "id": 9005054,
+     "id": 9005056,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3699,7 +3787,7 @@
      "interactive": null
     },
     {
-     "id": 9005055,
+     "id": 9005057,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3710,7 +3798,7 @@
      "interactive": null
     },
     {
-     "id": 9005056,
+     "id": 9005058,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3721,7 +3809,7 @@
      "interactive": null
     },
     {
-     "id": 9005057,
+     "id": 9005059,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3732,7 +3820,7 @@
      "interactive": null
     },
     {
-     "id": 9005058,
+     "id": 9005060,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -3749,7 +3837,7 @@
      }
     },
     {
-     "id": 9005059,
+     "id": 9005061,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3760,7 +3848,7 @@
      "interactive": null
     },
     {
-     "id": 9005060,
+     "id": 9005062,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3771,7 +3859,7 @@
      "interactive": null
     },
     {
-     "id": 9005061,
+     "id": 9005063,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3782,7 +3870,7 @@
      "interactive": null
     },
     {
-     "id": 9005062,
+     "id": 9005064,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3793,7 +3881,7 @@
      "interactive": null
     },
     {
-     "id": 9005063,
+     "id": 9005065,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3804,7 +3892,7 @@
      "interactive": null
     },
     {
-     "id": 9005064,
+     "id": 9005066,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3815,7 +3903,7 @@
      "interactive": null
     },
     {
-     "id": 9005065,
+     "id": 9005067,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3858,7 +3946,7 @@
     "resolution": "COD capped at 6k on trial, refusals 22 to 2, breach cleared"
    },
    "template": {
-    "n": 66,
+    "n": 68,
     "src_id": null,
     "src_name": "written to the flow",
     "src_score": null,
@@ -3881,13 +3969,13 @@
    "cohort": "agentic",
    "customer_name": "Dipanshu",
    "agent_name": null,
-   "message_count": 50,
+   "message_count": 51,
    "customer_count": 22,
-   "support_count": 28,
+   "support_count": 29,
    "human_count": 0,
    "substantive_customer": 4,
-   "characters": 1725,
-   "first_message_at": "2026-09-01 19:16:00+05:30",
+   "characters": 1830,
+   "first_message_at": "2026-09-01 19:15:00+05:30",
    "nps_n": 0,
    "label": "Chat 006",
    "quality": "exceptional",
@@ -3897,14 +3985,25 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "hey Dipanshu, chanakya from sourcex. order SX315558 got RTO'd, AWB 19041902816422. did you receive it back? will you reship or whats the plan?",
-     "created_at": "2026-09-01 19:16:00+05:30",
+     "text": "Hi Dipanshu, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
+     "created_at": "2026-09-01 19:15:00+05:30",
      "media_id": null,
      "operator_name": null,
      "interactive": null
     },
     {
      "id": 9006001,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Order SX315558 has been returned to origin. AWB 19041902816422. Could you please confirm whether you have received it back, and whether you intend to reship?",
+     "created_at": "2026-09-01 19:16:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9006002,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3915,7 +4014,7 @@
      "interactive": null
     },
     {
-     "id": 9006002,
+     "id": 9006003,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3926,7 +4025,7 @@
      "interactive": null
     },
     {
-     "id": 9006003,
+     "id": 9006004,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3937,7 +4036,7 @@
      "interactive": null
     },
     {
-     "id": 9006004,
+     "id": 9006005,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3948,7 +4047,7 @@
      "interactive": null
     },
     {
-     "id": 9006005,
+     "id": 9006006,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3959,7 +4058,7 @@
      "interactive": null
     },
     {
-     "id": 9006006,
+     "id": 9006007,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3970,7 +4069,7 @@
      "interactive": null
     },
     {
-     "id": 9006007,
+     "id": 9006008,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -3981,7 +4080,7 @@
      "interactive": null
     },
     {
-     "id": 9006008,
+     "id": 9006009,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -3992,7 +4091,7 @@
      "interactive": null
     },
     {
-     "id": 9006009,
+     "id": 9006010,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4003,7 +4102,7 @@
      "interactive": null
     },
     {
-     "id": 9006010,
+     "id": 9006011,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4014,7 +4113,7 @@
      "interactive": null
     },
     {
-     "id": 9006011,
+     "id": 9006012,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4025,7 +4124,7 @@
      "interactive": null
     },
     {
-     "id": 9006012,
+     "id": 9006013,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4036,7 +4135,7 @@
      "interactive": null
     },
     {
-     "id": 9006013,
+     "id": 9006014,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4047,7 +4146,7 @@
      "interactive": null
     },
     {
-     "id": 9006014,
+     "id": 9006015,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4058,7 +4157,7 @@
      "interactive": null
     },
     {
-     "id": 9006015,
+     "id": 9006016,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4069,7 +4168,7 @@
      "interactive": null
     },
     {
-     "id": 9006016,
+     "id": 9006017,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4080,7 +4179,7 @@
      "interactive": null
     },
     {
-     "id": 9006017,
+     "id": 9006018,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4091,7 +4190,7 @@
      "interactive": null
     },
     {
-     "id": 9006018,
+     "id": 9006019,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4102,7 +4201,7 @@
      "interactive": null
     },
     {
-     "id": 9006019,
+     "id": 9006020,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4113,7 +4212,7 @@
      "interactive": null
     },
     {
-     "id": 9006020,
+     "id": 9006021,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4124,7 +4223,7 @@
      "interactive": null
     },
     {
-     "id": 9006021,
+     "id": 9006022,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4135,7 +4234,7 @@
      "interactive": null
     },
     {
-     "id": 9006022,
+     "id": 9006023,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4146,7 +4245,7 @@
      "interactive": null
     },
     {
-     "id": 9006023,
+     "id": 9006024,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4157,7 +4256,7 @@
      "interactive": null
     },
     {
-     "id": 9006024,
+     "id": 9006025,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4168,7 +4267,7 @@
      "interactive": null
     },
     {
-     "id": 9006025,
+     "id": 9006026,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4179,7 +4278,7 @@
      "interactive": null
     },
     {
-     "id": 9006026,
+     "id": 9006027,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4190,7 +4289,7 @@
      "interactive": null
     },
     {
-     "id": 9006027,
+     "id": 9006028,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4201,7 +4300,7 @@
      "interactive": null
     },
     {
-     "id": 9006028,
+     "id": 9006029,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4212,7 +4311,7 @@
      "interactive": null
     },
     {
-     "id": 9006029,
+     "id": 9006030,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4223,7 +4322,7 @@
      "interactive": null
     },
     {
-     "id": 9006030,
+     "id": 9006031,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4234,7 +4333,7 @@
      "interactive": null
     },
     {
-     "id": 9006031,
+     "id": 9006032,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4245,7 +4344,7 @@
      "interactive": null
     },
     {
-     "id": 9006032,
+     "id": 9006033,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4256,7 +4355,7 @@
      "interactive": null
     },
     {
-     "id": 9006033,
+     "id": 9006034,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4267,7 +4366,7 @@
      "interactive": null
     },
     {
-     "id": 9006034,
+     "id": 9006035,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4278,7 +4377,7 @@
      "interactive": null
     },
     {
-     "id": 9006035,
+     "id": 9006036,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4289,7 +4388,7 @@
      "interactive": null
     },
     {
-     "id": 9006036,
+     "id": 9006037,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4300,7 +4399,7 @@
      "interactive": null
     },
     {
-     "id": 9006037,
+     "id": 9006038,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -4317,7 +4416,7 @@
      }
     },
     {
-     "id": 9006038,
+     "id": 9006039,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4328,7 +4427,7 @@
      "interactive": null
     },
     {
-     "id": 9006039,
+     "id": 9006040,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4339,7 +4438,7 @@
      "interactive": null
     },
     {
-     "id": 9006040,
+     "id": 9006041,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4350,7 +4449,7 @@
      "interactive": null
     },
     {
-     "id": 9006041,
+     "id": 9006042,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4361,7 +4460,7 @@
      "interactive": null
     },
     {
-     "id": 9006042,
+     "id": 9006043,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4372,7 +4471,7 @@
      "interactive": null
     },
     {
-     "id": 9006043,
+     "id": 9006044,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4383,7 +4482,7 @@
      "interactive": null
     },
     {
-     "id": 9006044,
+     "id": 9006045,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4394,7 +4493,7 @@
      "interactive": null
     },
     {
-     "id": 9006045,
+     "id": 9006046,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4405,7 +4504,7 @@
      "interactive": null
     },
     {
-     "id": 9006046,
+     "id": 9006047,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -4422,7 +4521,7 @@
      }
     },
     {
-     "id": 9006047,
+     "id": 9006048,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4433,7 +4532,7 @@
      "interactive": null
     },
     {
-     "id": 9006048,
+     "id": 9006049,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4444,7 +4543,7 @@
      "interactive": null
     },
     {
-     "id": 9006049,
+     "id": 9006050,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4473,7 +4572,7 @@
     "resolution": "reshipped same day, all four cleared inside the week"
    },
    "template": {
-    "n": 50,
+    "n": 51,
     "src_id": null,
     "src_name": "written to the flow",
     "src_score": null,
@@ -4496,13 +4595,13 @@
    "cohort": "agentic",
    "customer_name": "TopGun",
    "agent_name": null,
-   "message_count": 65,
-   "customer_count": 29,
-   "support_count": 36,
+   "message_count": 68,
+   "customer_count": 30,
+   "support_count": 38,
    "human_count": 0,
    "substantive_customer": 5,
-   "characters": 1994,
-   "first_message_at": "2026-08-28 11:10:00+05:30",
+   "characters": 2346,
+   "first_message_at": "2026-08-28 11:08:00+05:30",
    "nps_n": 1,
    "label": "Chat 007",
    "quality": "exceptional",
@@ -4512,8 +4611,8 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "hello",
-     "created_at": "2026-08-28 11:10:00+05:30",
+     "text": "Hi TopGun, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
+     "created_at": "2026-08-28 11:08:00+05:30",
      "media_id": null,
      "operator_name": null,
      "interactive": null
@@ -4523,14 +4622,47 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Seiko Mod Daytona Rose Gold Rainbow - do you have this?",
-     "created_at": "2026-08-28 11:10:00+05:30",
+     "text": "A gentle request about order SX316819 (Seiko Mod GMT Gold). The customer has an urgent requirement and has requested delivery by 17 September. Could you please help us fulfil this in time? When is the earliest you can ship this order? Thank you!",
+     "created_at": "2026-08-28 11:09:00+05:30",
      "media_id": null,
      "operator_name": null,
      "interactive": null
     },
     {
      "id": 9007002,
+     "author": "customer",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Wo kal nikal jayega",
+     "created_at": "2026-08-28 11:26:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9007003,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "noted",
+     "created_at": "2026-08-28 11:27:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9007004,
+     "author": "bot",
+     "kind": "text",
+     "role": "assistant",
+     "text": "Seiko Mod Daytona Rose Gold Rainbow - do you have this?",
+     "created_at": "2026-08-28 11:30:00+05:30",
+     "media_id": null,
+     "operator_name": null,
+     "interactive": null
+    },
+    {
+     "id": 9007005,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4541,7 +4673,7 @@
      "interactive": null
     },
     {
-     "id": 9007003,
+     "id": 9007006,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4552,7 +4684,7 @@
      "interactive": null
     },
     {
-     "id": 9007004,
+     "id": 9007007,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4563,7 +4695,7 @@
      "interactive": null
     },
     {
-     "id": 9007005,
+     "id": 9007008,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4574,7 +4706,7 @@
      "interactive": null
     },
     {
-     "id": 9007006,
+     "id": 9007009,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4585,7 +4717,7 @@
      "interactive": null
     },
     {
-     "id": 9007007,
+     "id": 9007010,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4596,7 +4728,7 @@
      "interactive": null
     },
     {
-     "id": 9007008,
+     "id": 9007011,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -4613,7 +4745,7 @@
      }
     },
     {
-     "id": 9007009,
+     "id": 9007012,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4624,7 +4756,7 @@
      "interactive": null
     },
     {
-     "id": 9007010,
+     "id": 9007013,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4635,7 +4767,7 @@
      "interactive": null
     },
     {
-     "id": 9007011,
+     "id": 9007014,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4646,7 +4778,7 @@
      "interactive": null
     },
     {
-     "id": 9007012,
+     "id": 9007015,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4657,7 +4789,7 @@
      "interactive": null
     },
     {
-     "id": 9007013,
+     "id": 9007016,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4668,7 +4800,7 @@
      "interactive": null
     },
     {
-     "id": 9007014,
+     "id": 9007017,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4679,7 +4811,7 @@
      "interactive": null
     },
     {
-     "id": 9007015,
+     "id": 9007018,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4690,7 +4822,7 @@
      "interactive": null
     },
     {
-     "id": 9007016,
+     "id": 9007019,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4701,7 +4833,7 @@
      "interactive": null
     },
     {
-     "id": 9007017,
+     "id": 9007020,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4712,7 +4844,7 @@
      "interactive": null
     },
     {
-     "id": 9007018,
+     "id": 9007021,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4723,7 +4855,7 @@
      "interactive": null
     },
     {
-     "id": 9007019,
+     "id": 9007022,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -4740,7 +4872,7 @@
      }
     },
     {
-     "id": 9007020,
+     "id": 9007023,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4751,7 +4883,7 @@
      "interactive": null
     },
     {
-     "id": 9007021,
+     "id": 9007024,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4762,7 +4894,7 @@
      "interactive": null
     },
     {
-     "id": 9007022,
+     "id": 9007025,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4773,7 +4905,7 @@
      "interactive": null
     },
     {
-     "id": 9007023,
+     "id": 9007026,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4784,7 +4916,7 @@
      "interactive": null
     },
     {
-     "id": 9007024,
+     "id": 9007027,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4795,7 +4927,7 @@
      "interactive": null
     },
     {
-     "id": 9007025,
+     "id": 9007028,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4806,7 +4938,7 @@
      "interactive": null
     },
     {
-     "id": 9007026,
+     "id": 9007029,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4817,7 +4949,7 @@
      "interactive": null
     },
     {
-     "id": 9007027,
+     "id": 9007030,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4828,7 +4960,7 @@
      "interactive": null
     },
     {
-     "id": 9007028,
+     "id": 9007031,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4839,7 +4971,7 @@
      "interactive": null
     },
     {
-     "id": 9007029,
+     "id": 9007032,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4850,7 +4982,7 @@
      "interactive": null
     },
     {
-     "id": 9007030,
+     "id": 9007033,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4861,7 +4993,7 @@
      "interactive": null
     },
     {
-     "id": 9007031,
+     "id": 9007034,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4872,7 +5004,7 @@
      "interactive": null
     },
     {
-     "id": 9007032,
+     "id": 9007035,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4883,7 +5015,7 @@
      "interactive": null
     },
     {
-     "id": 9007033,
+     "id": 9007036,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4894,7 +5026,7 @@
      "interactive": null
     },
     {
-     "id": 9007034,
+     "id": 9007037,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4905,7 +5037,7 @@
      "interactive": null
     },
     {
-     "id": 9007035,
+     "id": 9007038,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4916,7 +5048,7 @@
      "interactive": null
     },
     {
-     "id": 9007036,
+     "id": 9007039,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4927,7 +5059,7 @@
      "interactive": null
     },
     {
-     "id": 9007037,
+     "id": 9007040,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4938,7 +5070,7 @@
      "interactive": null
     },
     {
-     "id": 9007038,
+     "id": 9007041,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4949,7 +5081,7 @@
      "interactive": null
     },
     {
-     "id": 9007039,
+     "id": 9007042,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4960,7 +5092,7 @@
      "interactive": null
     },
     {
-     "id": 9007040,
+     "id": 9007043,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4971,7 +5103,7 @@
      "interactive": null
     },
     {
-     "id": 9007041,
+     "id": 9007044,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -4982,7 +5114,7 @@
      "interactive": null
     },
     {
-     "id": 9007042,
+     "id": 9007045,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -4993,7 +5125,7 @@
      "interactive": null
     },
     {
-     "id": 9007043,
+     "id": 9007046,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5004,7 +5136,7 @@
      "interactive": null
     },
     {
-     "id": 9007044,
+     "id": 9007047,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5015,7 +5147,7 @@
      "interactive": null
     },
     {
-     "id": 9007045,
+     "id": 9007048,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5026,7 +5158,7 @@
      "interactive": null
     },
     {
-     "id": 9007046,
+     "id": 9007049,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5037,7 +5169,7 @@
      "interactive": null
     },
     {
-     "id": 9007047,
+     "id": 9007050,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5048,7 +5180,7 @@
      "interactive": null
     },
     {
-     "id": 9007048,
+     "id": 9007051,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5059,7 +5191,7 @@
      "interactive": null
     },
     {
-     "id": 9007049,
+     "id": 9007052,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5070,7 +5202,7 @@
      "interactive": null
     },
     {
-     "id": 9007050,
+     "id": 9007053,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5081,7 +5213,7 @@
      "interactive": null
     },
     {
-     "id": 9007051,
+     "id": 9007054,
      "author": "bot",
      "kind": "interactive",
      "role": "assistant",
@@ -5098,7 +5230,7 @@
      }
     },
     {
-     "id": 9007052,
+     "id": 9007055,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5109,7 +5241,7 @@
      "interactive": null
     },
     {
-     "id": 9007053,
+     "id": 9007056,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5120,7 +5252,7 @@
      "interactive": null
     },
     {
-     "id": 9007054,
+     "id": 9007057,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5131,7 +5263,7 @@
      "interactive": null
     },
     {
-     "id": 9007055,
+     "id": 9007058,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5142,7 +5274,7 @@
      "interactive": null
     },
     {
-     "id": 9007056,
+     "id": 9007059,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5153,7 +5285,7 @@
      "interactive": null
     },
     {
-     "id": 9007057,
+     "id": 9007060,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5164,7 +5296,7 @@
      "interactive": null
     },
     {
-     "id": 9007058,
+     "id": 9007061,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5175,7 +5307,7 @@
      "interactive": null
     },
     {
-     "id": 9007059,
+     "id": 9007062,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5186,7 +5318,7 @@
      "interactive": null
     },
     {
-     "id": 9007060,
+     "id": 9007063,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5197,7 +5329,7 @@
      "interactive": null
     },
     {
-     "id": 9007061,
+     "id": 9007064,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5208,7 +5340,7 @@
      "interactive": null
     },
     {
-     "id": 9007062,
+     "id": 9007065,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5219,7 +5351,7 @@
      "interactive": null
     },
     {
-     "id": 9007063,
+     "id": 9007066,
      "author": "bot",
      "kind": "text",
      "role": "assistant",
@@ -5230,7 +5362,7 @@
      "interactive": null
     },
     {
-     "id": 9007064,
+     "id": 9007067,
      "author": "customer",
      "kind": "text",
      "role": "assistant",
@@ -5273,7 +5405,7 @@
     "resolution": "dispatch average 15.7 to 6.2, fulfilment held at 99"
    },
    "template": {
-    "n": 65,
+    "n": 68,
     "src_id": null,
     "src_name": "written to the flow",
     "src_score": null,
@@ -5301,7 +5433,7 @@
    "support_count": 49,
    "human_count": 0,
    "substantive_customer": 13,
-   "characters": 3513,
+   "characters": 3530,
    "first_message_at": "2026-08-14 10:30:00+05:30",
    "nps_n": 1,
    "label": "Chat 008",
@@ -5312,7 +5444,7 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Hello, Chanakya from SourceX. I will be looking after your order follow ups.",
+     "text": "Hi DJ1, this is Chanakya from SourceX. I look after seller orders for Culture Circle.",
      "created_at": "2026-08-14 10:30:00+05:30",
      "media_id": null,
      "operator_name": null,
@@ -5323,7 +5455,7 @@
      "author": "bot",
      "kind": "text",
      "role": "assistant",
-     "text": "Can you please confirm the estimated shipping date for SX314813, Seiko Mod Santos Silver Fume.",
+     "text": "Could you please confirm the estimated shipping date for order SX314813, Seiko Mod Santos Silver Fume.",
      "created_at": "2026-08-14 10:31:00+05:30",
      "media_id": null,
      "operator_name": null,

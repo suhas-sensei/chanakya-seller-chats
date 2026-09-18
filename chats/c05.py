@@ -8,7 +8,7 @@ the formal register with a real penalty attached, COD refusals taken to the team
 cap that costs him volume.
 """
 
-from ._voice import reminder
+from ._voice import intro, open_update, reminder
 
 CHAT = {
     "file": "c05", "id": 9005,
@@ -24,6 +24,9 @@ CHAT = {
         "resolution": "COD capped at 6k on trial, refusals 22 to 2, breach cleared",
     },
     "turns": [
+        ("2026-08-18 11:30", "cx", intro("Sneak Drip")),
+        ("2026-08-18 11:31", "cx",
+         open_update("SX325430", "ALL SAINTS Xander Flocked Logo Oversized")),
         ("2026-08-18 15:20", "sl", "Bhai SX327430 ka payout kab aayega"),
         ("2026-08-18 15:35", "cx",
          "wo abhi deliver nahi hua hai. AWB in transit dikha raha hai, kal out for delivery "

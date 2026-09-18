@@ -8,7 +8,7 @@ order chases threaded through it. One date negotiated down from next week, one m
 that needed the listing type fixed rather than the seller pushed.
 """
 
-from ._voice import new_order, reminder
+from ._voice import intro, new_order, open_urgent, reminder
 
 CHAT = {
     "file": "c07", "id": 9007,
@@ -24,8 +24,12 @@ CHAT = {
         "resolution": "dispatch average 15.7 to 6.2, fulfilment held at 99",
     },
     "turns": [
-        ("2026-08-28 11:10", "cx", "hello"),
-        ("2026-08-28 11:10", "cx", "Seiko Mod Daytona Rose Gold Rainbow - do you have this?"),
+        ("2026-08-28 11:08", "cx", intro("TopGun")),
+        ("2026-08-28 11:09", "cx",
+         open_urgent("SX316819", "Seiko Mod GMT Gold", "17 September")),
+        ("2026-08-28 11:26", "sl", "Wo kal nikal jayega"),
+        ("2026-08-28 11:27", "cx", "noted"),
+        ("2026-08-28 11:30", "cx", "Seiko Mod Daytona Rose Gold Rainbow - do you have this?"),
         ("2026-08-28 11:32", "sl", "Han 2 piece"),
         ("2026-08-28 11:33", "cx", "payout?"),
         ("2026-08-28 11:36", "sl", "15.5k"),
