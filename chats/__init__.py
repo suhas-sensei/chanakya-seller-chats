@@ -1,27 +1,23 @@
 """The drafts, in the order the console lists them.
 
-Ten order-chasing threads. Each one is a job rather than a conversation: an order is late
-or a payout is blocking one, Chanakya negotiates, it resolves. They are short on purpose,
-10 to 16 messages, because that is how long the real thing takes.
+Eight seller relationships, each running weeks and built from short transactional
+episodes: a reminder, a date, a follow up, a payout, a sourcing question, an RTO. Shape
+and voice both come from `Seller WhatsApp Chat Export.zip` (34 real seller threads, 17,276
+lines) rather than from the customer-side report. See `_voice.py` before writing a new one.
 
-Coverage:
+    c01  ELITE FINDS         optimistic, "checking", "99%", says boss
+    c02  Delicc Enterprises  polite, "Pls", "Kindly", 🙏, says sir and bro
+    c03  DS.WT               bhai as a suffix, big operator, direct
+    c04  Mindyourkicks       "Hnji", trailing dots, no address term
+    c05  Sneak Drip          argues his corner, mixes bhai, bro and yaar
+    c06  Dipanshu            two and three word replies, rarely says bro
+    c07  TopGun              talks in numbers, no pleasantries, no address term
+    c08  DJ1                 wants to call for everything, "Okok"
 
-    c01  RTO reship, courier workaround, reputation lever
-    c02  reputation score and PDP views dropping
-    c03  high value buyer, payout cleared first
-    c04  payout: order never marked complete  (the main case, with the 3-day follow-up)
-    c05  payout: customer has not received delivery yet
-    c06  bulk follow-up, five orders clubbed
-    c07  the X minus 1 reminder
-    c08  negotiating "next week" down to a date
-    c09  payout used as the reason not to ship
-    c10  bulk follow-up with a high value exception
-
-Drafts carry explicit `turns` and set their own length. The older skeleton-copying format
-(`template` + `texts`, matching a real chat's shape message for message) is still supported
-by `build.py` if a draft declares it.
+Drafts carry explicit `turns`. The older skeleton-copying format (`template` + `texts`,
+matching a csat-review chat message for message) is still supported by `build.py`.
 """
 
-from . import c01, c02, c03, c04, c05, c06, c07, c08, c09, c10
+from . import c01, c02, c03, c04, c05, c06, c07, c08
 
-DRAFTS = [m.CHAT for m in (c01, c02, c03, c04, c05, c06, c07, c08, c09, c10)]
+DRAFTS = [m.CHAT for m in (c01, c02, c03, c04, c05, c06, c07, c08)]

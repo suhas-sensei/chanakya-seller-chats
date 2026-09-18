@@ -87,29 +87,40 @@ def avatar(wa):
     return "data:image/svg+xml;base64," + base64.b64encode(svg.encode()).decode()
 
 
-WHO = {"cx": "bot", "sl": "customer", "ops": "human"}
+# cx  Chanakya, free text
+# tpl Chanakya sending an approved template (the REMINDER / new-order blocks). Rendered
+#     with the dashed border the console already gives interactive sends, because that is
+#     what they are: a fixed block, not something written for this seller.
+# sl  the seller
+# ops a human teammate
+WHO = {"cx": "bot", "tpl": "bot", "sl": "customer", "ops": "human"}
 
 
 def build_turns(d, index):
     """A free-form draft: explicit (timestamp, who, text) turns, no skeleton.
 
-    These are the order-chasing threads. They are short and transactional on purpose,
-    because the job is input -> negotiation -> resolution rather than a conversation.
-    A skeleton copied off a 132-message customer chat is the wrong shape for that, so
-    these drafts set their own length.
+    Shape comes from the real seller exports rather than from a customer chat. Those run a
+    median 159 messages over 19 active days, and they are not one long conversation: they
+    are weeks of short transactional episodes against the same seller. A reminder, a date,
+    a follow-up, a payout, a sourcing question, an RTO. So a draft is long because it
+    covers many orders over time, while each episode inside it stays three to eight
+    messages.
     """
     msgs = []
     for i, (at, who, text) in enumerate(d["turns"]):
         if who not in WHO:
             raise SystemExit(f'{d["file"]} turn {i}: unknown speaker {who!r}')
         author = WHO[who]
-        msgs.append({
-            "id": d["id"] * 1000 + i, "author": author, "kind": "text",
-            "role": "assistant", "text": text,
+        m = {
+            "id": d["id"] * 1000 + i, "author": author,
+            "kind": "interactive" if who == "tpl" else "text",
+            "role": "assistant", "text": None if who == "tpl" else text,
             "created_at": f"{at}:00+05:30", "media_id": None,
             "operator_name": d.get("operator", "Seller Ops") if author == "human" else None,
-            "interactive": None,
-        })
+            "interactive": ({"type": "template", "body": {"text": text}, "rows": []}
+                            if who == "tpl" else None),
+        }
+        msgs.append(m)
     return finish_chat(d, index, msgs, template=None)
 
 
@@ -267,6 +278,13 @@ RENDER_SUBS = [
      " &middot; ${c.messages.length.toLocaleString('en-IN')} messages</p>"),
     ("</div>`;\n $('back').onclick=",
      "</div>${flowStrip(c)}`;\n $('back').onclick="),
+    # The renderer never puts the message kind in the class list, so an approved template
+    # looks identical to something written for this seller. On this lane that difference
+    # matters: a REMINDER block is a fixed send, not a negotiation.
+    ('class="message ${outbound?\'out\':\'\'} ${m.author===\'human\'?\'human\':\'\'} '
+     '${runStart?\'run-start\':\'\'}"',
+     'class="message ${outbound?\'out\':\'\'} ${m.author===\'human\'?\'human\':\'\'} '
+     '${runStart?\'run-start\':\'\'} ${m.kind===\'interactive\'?\'tpl\':\'\'}"'),
 ]
 
 # Injected ahead of the renderer. Uses the page's own variables so it themes with
@@ -292,6 +310,12 @@ FLOW_CSS = """
 .flow-v{font-size:12px;line-height:1.45;color:var(--ink)}
 .flow-cell:nth-child(3) .flow-v{color:var(--accent,#1f6f4f)}
 @media(max-width:640px){.flow{grid-template-columns:1fr}}
+/* approved template sends: fixed blocks, not written for this seller */
+.message.tpl .bubble{border:1px dashed var(--line);background:transparent}
+.message.tpl .message-text{white-space:pre-wrap;font-size:12px;opacity:.85}
+.message.tpl .message-group::before{content:'approved template';display:block;
+ font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+ margin-bottom:3px}
 """
 
 # The two tiles the seller console has no use for. Removed from the shell rather than

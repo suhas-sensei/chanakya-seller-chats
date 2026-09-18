@@ -7,19 +7,21 @@ someone who has not seen this before.
 
 ## 1. What this is, in one paragraph
 
-Ten drafted WhatsApp threads between **Chanakya** (the autonomous seller-facing agent in the
-`chanakya` repo) and ten real SourceX sellers, rendered in an ops console. Each thread is a
-job rather than a conversation: an order is late, or a payout is blocking one, Chanakya
-chases and negotiates, and it resolves. They run 10 to 16 messages. They exist as test
-fixtures — realistic material for exercising tone, negotiation, SOP coverage and console
-rendering without touching production.
+Eight drafted WhatsApp relationships between **Chanakya** (the autonomous seller-facing
+agent in the `chanakya` repo) and eight real SourceX sellers, rendered in an ops console.
+Each runs weeks and is built from short transactional episodes: a reminder, a date, a
+follow-up, a payout, a sourcing question, an RTO. They exist as test fixtures — realistic
+material for exercising tone, negotiation, SOP coverage and console rendering without
+touching production.
 
 Nothing here was ever sent to anyone.
 
-**These drafts are short on purpose.** An earlier version copied real 31-to-132-message
-customer conversations message-for-message, which produced long coaching sessions that read
-nothing like seller ops. That machinery still exists and still works (§5), but the current
-set is written to the flow: input, negotiation, resolution.
+**Shape and voice come from the real seller exports**, not from the customer-side report.
+`Seller WhatsApp Chat Export.zip` holds 34 real seller threads, 17,276 lines, running a
+median 159 messages over 19 active days. `chats/_voice.py` is the voice reference distilled
+from it — read that before writing a draft. An earlier version copied customer chats
+message-for-message and read like coaching sessions; that machinery still works (§5) but is
+not what the current set uses.
 
 ---
 
@@ -29,7 +31,8 @@ Three sources, all read-only. No write ever went back to any of them.
 
 | what | where it came from | how |
 |---|---|---|
-| conversation shapes | `~/culture-circle/local-reports/csat-review.html` | 500 real rated Prithvi chats; skeletons vendored into `skeletons.json` |
+| voice and shape | `Seller WhatsApp Chat Export.zip` | 34 real seller threads, 17,276 lines; distilled into `chats/_voice.py` |
+| legacy chat skeletons | `~/culture-circle/local-reports/csat-review.html` | 500 real rated Prithvi chats; vendored into `skeletons.json` |
 | the console UI | the same file | CSS + lucide + renderer + markup, vendored into `shell/page.html` |
 | seller identities, orders, stats | Chanakya's Supabase | `GET /rest/v1` on `sellers`, `urgent_pushes`, `size_exchanges`, `messages` |
 | Chanakya's WhatsApp sender | Meta Graph API | `GET /v21.0/{phone_number_id}` → `+91 92176 76103`, verified name Rajiv |
@@ -85,9 +88,9 @@ credential is ever written to disk by anything here.
 
 ```
 chats/cNN.py      one dict per draft: seller, order, `flow`, and `turns`
-                  turns = [(timestamp, who, text), ...]   who: cx | sl | ops
+                  turns = [(timestamp, who, text), ...]   who: cx | tpl | sl | ops
         │
-build.py          build_turns()  -> free-form drafts (all ten current ones)
+build.py          build_turns()  -> free-form drafts (all eight current ones)
                   build_chat()   -> skeleton-bound drafts (legacy, still supported)
                   finish_chat()  -> shared tail, derives the console's counters
                   clones shell/page.html, swaps data + a handful of strings
@@ -125,17 +128,21 @@ also get the source report's 30-message selection floor. Free-form drafts skip b
 4. Register it in `chats/__init__.py`.
 5. `python3 build.py && python3 verify_ids.py`. Both must come back clean.
 
-**Writing Chanakya.** Lowercase, short, "brother". Never repeat the ask — answer the excuse
-and counter-offer. The levers that work, roughly in order:
+**Read `chats/_voice.py` first.** It is the voice reference, quoted from the real exports.
+The short version:
 
-- **the seller's own numbers** — reputation score, PDP views, fulfilment rate
-- **what the buyer is worth** — order count, lifetime value, how often they've asked
-- **what waiting costs the seller** — a cancel loses the sale *and* the payout on it
-- **removing the obstacle** — a courier that's working today, a payout unblocked from the
-  backend
+- **Two registers.** Open formal, and go formal again whenever it turns serious — penalties,
+  SLA, a lost parcel. Everything else is terse Hinglish.
+- **Vary the ask.** "what is the status of this order?" / "status of this shipment?" /
+  "any update?" / "ye kab ship ho rha?" / "what is the update on this". Repeat one verbatim
+  when the seller goes quiet, which is what actually happens.
+- **Never repeat the ask without a lever.** SLA and the 5% penalty, TAT and ranking, holding
+  the date he gave you, what the buyer is worth, or removing the blocker outright.
+- **Address terms are per seller.** bhai, bro, boss, ji, sir, yaar, Hnji, or nothing at all.
+  Do not give every seller the same word, and do not default to one for Chanakya either.
 
-**Writing the seller.** Hinglish, terse, lowercase, typos fine. `agle hafte bhejenge`,
-`payout atka hua hai`, `theek hai try karta hu`, `nikal gaya`.
+**Writing the seller.** Give each one a register and stay in it. The eight in use are listed
+in `chats/__init__.py`; the observed set is in `_voice.py`. Hinglish, terse, typos fine.
 
 To use the legacy skeleton path instead: `python3 build.py --scaffold 225` prints, for every
 index, who speaks, when, what kind and how long the real message was. The 225 skeleton
