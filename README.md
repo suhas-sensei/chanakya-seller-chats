@@ -20,7 +20,7 @@ threads, 17,276 lines. Measured from it:
 
 | | real exports | these drafts |
 |---|---|---|
-| messages per thread | median **159**, range 11–842 | 50–88 |
+| messages per thread | median **159**, range 11–842 | 51–88 |
 | active days | median **19**, range 2–61 | 8–20 |
 | episode length | 3–8 messages | 3–8 messages |
 
@@ -39,12 +39,13 @@ same three beats, from `chats/_voice.py`: who he is, which order, what he needs.
 > requirement and has requested delivery by 17 September. Could you please help us fulfil
 > this in time? When is the earliest you can ship this order? Thank you!
 
-It drops to Hinglish on the second or third exchange and stays there:
+And it returns when something becomes disputable:
 
-> Can you please confirm the estimated shipping date for order SX333916.
->
 > Please note the following. 9 of your 10 open orders are currently in SLA breach. Orders
 > that cross the breach window are auto cancelled, and a 5% penalty is deducted.
+>
+> Kindly note SX324592 was auto cancelled this morning as it was not accepted within 24
+> hours. Could you tell me if there was an issue at your end?
 
 Plus the fixed blocks, sent verbatim: the `REMINDER 🚨🚨🚨` template and the new-order block,
 both marked in the UI as approved templates because that's what they are.
@@ -74,12 +75,12 @@ No two sound alike, and the address term is per seller — never one word for ev
 | # | seller | msgs | days | register |
 |---|---|---|---|---|
 | c01 | ELITE FINDS | 52 | 8 | optimistic — "Checking" / "2 min" / "99%" / **boss** |
-| c02 | Delicc Enterprises | 55 | 9 | polite — "Pls check" / "Kindly" / 🙏 / **sir, bro** |
+| c02 | Delicc Enterprises | 58 | 10 | polite — "Pls check" / "Kindly" / 🙏 / **sir, bro** |
 | c03 | DS.WT | 69 | 13 | direct — "Any update **bhai**" as a suffix |
-| c04 | Mindyourkicks | 75 | 11 | easy — "Hnji.." / "Acha.. koi na." / *no term* |
-| c05 | Sneak Drip | 66 | 12 | argues — "Dekhona **bro**" / "where i come from **yaar**" |
-| c06 | Dipanshu | 50 | 11 | two words — "yes wait" / "Aajaega" / **bro**, rarely |
-| c07 | TopGun | 65 | 12 | numbers only — "15.5k" / "Bhejdia aage" / *no term* |
+| c04 | Mindyourkicks | 78 | 11 | easy — "Hnji.." / "Acha.. koi na." / *no term* |
+| c05 | Sneak Drip | 68 | 12 | argues — "Dekhona **bro**" / "where i come from **yaar**" |
+| c06 | Dipanshu | 51 | 11 | two words — "yes wait" / "Aajaega" / **bro**, rarely |
+| c07 | TopGun | 68 | 12 | numbers only — "15.5k" / "Bhejdia aage" / *no term* |
 | c08 | DJ1 | 88 | 20 | wants to call — "Call kru?" / "Okok" |
 
 ## What the threads cover
