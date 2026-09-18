@@ -1,89 +1,49 @@
-"""Copies Vivaan Agarwal (src 7690): 32 messages, 5 days, CSAT 4, agentic.
+"""Reputation score and PDP views. The negotiation lever is the seller's own numbers.
 
-Shape being matched: the verbose end of the agent register. The real chat's bot replies
-run 386, 547, 317, 410, 336 and 315 characters against seller messages of 2 to 54, and it
-carries two CSAT prompts, one mid-thread and one at the end. Nothing bursts; every turn
-alternates.
+Seller opens with "next week". Chanakya does not argue about the date, he shows the score
+drop and the view drop it already caused, which reframes shipping today as the seller's
+problem rather than ours.
 """
 
 CHAT = {
-    "file": "c02", "id": 9002, "template": 32,
-    "codes": "cbcbcbcbcbcbbcbcbcbcbcbcbcbcbbcb",
-    "wa": "918575633111", "name": "Elvara", "score": 4, "nps": 8,
-    "sop": "urgent_delivery", "sx": "SX321255",
-    "seller_note": "7938 shipped, 86.22% fulfilment, 1371 rejected, avg 10.1 days",
-    "order_note": "SX321255 Prada Square Sunglasses Black, Rs 28,078, guaranteed 11 Sep",
-    "texts": [
-        "Hi",
-        "Hey Elvara. What can I help with today?",
-        "SX321255 Prada sunglasses, customer bar bar puch raha hai kya?",
-        "That's the Prada Square Sunglasses in black, 28,078 rupees, going to Ranga Reddy. "
-        "It was guaranteed for the 11th so it's a day over. The customer hasn't "
-        "complained, they asked once where it was, which is fair. What I need from you is "
-        "the real ship date, not a comfortable one, because at this value a silent delay "
-        "turns into a cancellation and then we've both lost the order.",
-        "Kal subah nikal jayega pakka",
-        "Good, I'll take the 18th and record it. Two things worth saying while this one is "
-        "still with you, because sunglasses are the category we see the most damage claims "
-        "on. First, the hard case has to go inside the box with padding around it, not "
-        "loose. A case that moves in transit scratches the lenses through the microfibre "
-        "and that comes back as a damage claim against your account, not the courier's. "
-        "Second, put the authenticity card and the dust cloth in the box rather than the "
-        "outer sleeve. Authentication opens the outer, and anything sitting there has a "
-        "habit of not making it back in.",
-        "Case to hamesha andar dalte hain",
-        "Then you're already doing the main thing right. The one I'd check is the padding, "
-        "because a case sitting in a box with no fill still travels. If you press the "
-        "closed box and you hear movement, it needs more paper. That single check is the "
-        "difference between this arriving clean and a claim three weeks from now that you "
-        "have to argue.",
-        "Note kar liya, dhyan rakhenge",
-        "Recorded the 18th on SX321255 with a check on it. If the AWB isn't up by tomorrow "
-        "evening I'll ping you here rather than let it sit. Nothing else needed from you.",
-        "Ek aur, rejected orders kaise kam karun",
-        "That's your biggest number by a distance, 1,371 against 7,938 shipped. At that "
-        "ratio it isn't bad luck, it's listings showing stock you've already moved. The "
-        "fix is unglamorous. Once a week, pull anything you've sold through another "
-        "channel and anything you can't physically put your hands on. You'll lose views "
-        "for about a week and then your fulfilment starts climbing, which is what decides "
-        "how much flow you get in the first place.",
-        "quick one before you go, how was the help you got from us today? one tap, and it "
-        "genuinely helps us improve your seller experience massively",
-        "4 - Good",
-        "noted, appreciate you taking the time",
-        # -- two days later
-        "SX321255 deliver ho gaya? Customer ka reply?",
-        "Delivered yesterday afternoon and signed for. No damage flag, no claim, and the "
-        "customer rated the order five. Worth noting that's the highest value piece your "
-        "store has shipped this quarter and it went out clean, one day late. Nobody is "
-        "going to remember the day, they'll remember it arrived right.",
-        # -- five days on
-        "Listing clean up start kiya hai",
-        "I can see it, about ninety listings gone. Hold your nerve through the next week, "
-        "because views will dip and it will feel like the wrong call. It isn't. You "
-        "removed the listings generating orders you couldn't honour, so a smaller share of "
-        "views but far more of them turn into something you actually ship.",
-        "Views gir gaye hain already, order bhi kam aa rahe hain",
-        "Expected, and it's day three of about ten. If it hasn't turned by the end of next "
-        "week, message me and I'll look at whether what's left is priced where the market "
-        "actually is rather than where you'd like it.",
-        "Theek hai, wait karte hain",
-        "That's the right call. One thing you can do meanwhile that costs nothing: make "
-        "sure everything you kept is marked in hand if it genuinely is. Buyers filter on "
-        "that before anything else.",
-        "Sab in hand hai ab",
-        "Then you've done both halves of this. A catalogue you can honour, marked "
-        "honestly, is the whole thing. I'll stop giving you homework now and let the "
-        "numbers move on their own. Ping me if the dip hasn't recovered by Friday.",
-        "Order aa rahe hain",
-        "Already? That's quicker than I expected.",
-        "Haan, kal se 14 naye order aa gaye",
-        "Fourteen in a day against a cleaner catalogue is a better position than forty "
-        "against one you can't service. Watch your rejection count this week, if it stays "
-        "near zero the fulfilment number starts recovering from here.",
-        "quick one before you go, how was the help you got from us today? one tap, and it "
-        "genuinely helps us improve your seller experience massively",
-        "4 - Good",
-        "noted, appreciate you taking the time",
+    "file": "c02", "id": 9002,
+    "wa": "918766709652", "name": "ELITE FINDS", "score": 5, "nps": 9,
+    "sop": "promised_ship_date", "sx": "SX333916",
+    "seller_note": "2904 shipped, 92.96% fulfilment, 391 rejected, avg 8.6 days",
+    "order_note": "SX333916 Nike Gamma Force (W) White and Pink, Rs 3,178, guaranteed "
+                  "9 Sep, Bangalore",
+    "flow": {
+        "input": "SX333916 four days past guarantee, seller offering next week",
+        "action": "showed the reputation score drop and the 31% PDP view fall it caused, "
+                  "traded next week for tonight's pickup",
+        "resolution": "three overdue orders out the same evening",
+    },
+    "turns": [
+        ("2026-09-17 10:02", "cx",
+         "hey ELITE FINDS, chanakya from sourcex. SX333916 nike gamma force W white pink, "
+         "guaranteed was 9 sep. where is it brother?"),
+        ("2026-09-17 10:26", "sl", "agle hafte bhejenge"),
+        ("2026-09-17 10:27", "cx",
+         "next week is 7 days away and this one is already 4 days late. thats 11 days for "
+         "a pair you have in hand"),
+        ("2026-09-17 10:31", "sl", "abhi bulk aaya nahi hai"),
+        ("2026-09-17 10:33", "cx",
+         "brother your reputation score went 94 to 87 this week and your PDP views are "
+         "down 31 percent because of it. thats not a warning, its already happening to "
+         "your listings"),
+        ("2026-09-17 10:38", "sl",
+         "views kam ho rahe the, samajh nahi aa raha tha kyu"),
+        ("2026-09-17 10:39", "cx",
+         "now you know. the score recovers as soon as the late ones clear. ship this plus "
+         "the 2 other overdue today and youll see views back inside a week"),
+        ("2026-09-17 10:44", "sl", "aaj ka pickup to nikal gaya"),
+        ("2026-09-17 10:45", "cx",
+         "delhivery runs an evening pickup till 7. can you push these 3 into that? one day "
+         "matters a lot on this score"),
+        ("2026-09-17 10:52", "sl", "theek hai try karta hu"),
+        ("2026-09-17 18:40", "sl", "3 nikal gaye, SX333916 bhi usme hai"),
+        ("2026-09-17 18:42", "cx",
+         "perfect, thats the fastest way back up. ill check your score friday and tell you "
+         "where it lands"),
     ],
 }

@@ -1,80 +1,52 @@
-"""Copies Viraj . (src 8725): 36 messages, 6 days, CSAT 5, agentic.
+"""High value customer. Seller is blocked on payout, Chanakya clears it then trades on
+who the buyer is.
 
-Shape being matched: the terse end of the agent register. The real chat's bot replies have
-a 43-character median, it carries two tool steps that render as their own bubbles, a
-teammate posts alone across two days with one 443-character message, and it ends with five
-consecutive seller messages that nobody answers. The rating was recorded before that tail,
-which is why a 5 sits on a thread trailing off into silence.
+Two levers in one thread: unblock the money so the excuse is gone, then use the customer's
+lifetime value to buy a same-day dispatch on a 28k piece.
 """
 
 CHAT = {
-    "file": "c03", "id": 9003, "template": 36,
-    "codes": "cbcbcbcbcbcbbcbbhhhhhhcbcbcbcbbccccc",
-    "wa": "917275493283", "name": "Hypestreet India", "score": 5, "nps": None,
-    "sop": "size_exchange", "sx": "SX334538",
-    "seller_note": "1747 shipped, 89.62% fulfilment, 217 rejected, avg 4.8 days",
-    "order_note": "SX334538 Kenzo Classic T-Shirt Black (S), pickup to Home, Kanpur 208026",
-    "texts": [
-        "Hi",
-        "Hey Hypestreet. Go ahead.",
-        "SX334538 ka exchange aaya hai, customer ko M chahiye. Mere paas M hai but return "
-        "address confirm karna hai",
-        "Right. The Kenzo Classic T-Shirt in S comes back to you and the M goes out. Your "
-        "Home address on file is J104 Ratan Orbit, Indira Nagar, Kanpur 208026. Same one?",
-        "Haan ji",
-        "Scheduled. Nothing else.",
-        "Theek hai thanks",
-        "Pickup scan lands tomorrow, I'll say.",
-        # -- five days later
-        "Bhai pickup abhi tak nahi aaya hai",
-        "That's four days, too long. Let me look at it rather than guess.",
-        "Haan dekh lo please",
-        "used verify_tracking",
-        "Found it. The pickup was attempted on the 19th and marked customer not available, "
-        "which is wrong, the pickup is from you and not the customer. The courier logged it "
-        "against the wrong leg. I've raised it and asked for a fresh attempt tomorrow. "
-        "Nothing for you to do.",
-        "Achha ji",
-        "used schedule_recheck",
-        "Re-check set for tomorrow evening. If the courier misses it again I'll stop asking "
-        "them and route it through the other partner instead, which costs us a day but ends "
-        "the loop. Either way you'll hear from me tomorrow rather than having to chase it "
-        "next week.",
-        # -- a teammate, alone, across two days
-        "Hi Hypestreet, Nikhil from Seller Ops, picking up the pickup failures.",
-        "We've looked at the last thirty reverse pickups booked to your Kanpur address.",
-        "Eleven of them failed on the first attempt, all with the same wrong reason code. "
-        "That isn't your address and it isn't the courier's driver, it's how the booking is "
-        "being generated at our end for Kanpur pincodes.",
-        "So this was ours. You've been chasing a problem we created, eleven separate times, "
-        "and nobody on our side told you what it actually was.",
-        "Two things are changing. The booking template for your pincode is being corrected "
-        "this week, which should take the first attempt failure rate to near zero. And for "
-        "the eleven that failed, we're crediting the extra handling back to your account "
-        "rather than making you claim it, because you shouldn't have to file for our bug. "
-        "You don't need to do anything for either. Chanakya will confirm when the template "
-        "fix is live.",
-        "One ask in return. If a pickup fails after this week, tell Chanakya the same day "
-        "rather than waiting to see whether it retries. A same day report gives us the "
-        "courier log while it's still useful. After 48 hours it's gone.",
-        # -- a fortnight on
-        "Bhai pickup theek chal raha",
-        "Good to hear. I checked before replying: eighteen reverse pickups since the fix, "
-        "seventeen collected on the first attempt. That's the number that was eleven out of "
-        "thirty. You should stop seeing this entirely. Thanks for flagging it.",
-        "Badhiya",
-        "Anything else open on your side?",
-        "Nahi, sab clear hai",
-        "Then I'll leave you to it. Have a good week.",
-        "Aap bhi bhai, thanks",
-        "Anytime, take care.",
-        "quick one before you go, how was the help you got from us today? one tap, and it "
-        "genuinely helps us improve your seller experience massively",
-        # -- three days later the seller comes back and nobody picks it up
-        "Bhai ek naya exchange aaya hai",
-        "?",
-        "SX320771?",
-        ".",
-        "Kal bata dena",
+    "file": "c03", "id": 9003,
+    "wa": "918575633111", "name": "Elvara", "score": 5, "nps": 10,
+    "sop": "urgent_delivery", "sx": "SX321255",
+    "seller_note": "7938 shipped, 86.22% fulfilment, 1371 rejected, avg 10.1 days",
+    "order_note": "SX321255 Prada Square Sunglasses Black, Rs 28,078, guaranteed 11 Sep, "
+                  "buyer has ordered 9 times",
+    "flow": {
+        "input": "SX321255 held back, seller refusing to ship until payout clears",
+        "action": "cleared the payout block from the backend, then traded on the buyer's "
+                  "9 orders and 4.2L lifetime",
+        "resolution": "shipped same day, packed to the buyer's known complaint",
+    },
+    "turns": [
+        ("2026-09-17 12:05", "cx",
+         "Elvara, chanakya here. SX321255 prada square sunglasses, 28,078. guaranteed "
+         "11 sep, still not shipped. whats holding it brother?"),
+        ("2026-09-17 12:20", "sl",
+         "payout atka hua hai, 6 order ka paisa nahi aaya. jab tak clear nahi hoga nahi "
+         "bhejenge"),
+        ("2026-09-17 12:21", "cx", "let me look at that before i ask you for anything else"),
+        ("2026-09-17 12:26", "cx",
+         "found it. 5 of those 6 are delivered but not marked complete from your side, "
+         "thats the only thing holding them. dont worry, ill get it marked complete from "
+         "the backend and your payout will be processed"),
+        ("2026-09-17 12:29", "sl", "sach me? mujhe laga aapke side ka issue hai"),
+        ("2026-09-17 12:30", "cx",
+         "no, its a two tap thing nobody walked you through. done from my end now, it goes "
+         "in the next run"),
+        ("2026-09-17 12:33", "sl", "thank you bhai"),
+        ("2026-09-17 12:35", "cx",
+         "now SX321255. this buyer has ordered 9 times from us, 4.2 lakh lifetime. they "
+         "asked about this pair twice this week"),
+        ("2026-09-17 12:38", "sl", "achha wo regular hai"),
+        ("2026-09-17 12:39", "cx",
+         "and they buy at this price point every month. one bad delivery on a 28k piece "
+         "and we lose the next 10 orders, and those orders come to sellers like you"),
+        ("2026-09-17 12:44", "sl", "samajh gaya, aaj hi nikal jayega"),
+        ("2026-09-17 12:45", "cx",
+         "appreciate it brother. one thing, pack the hard case with fill around it. this "
+         "buyer has flagged loose packaging before"),
+        ("2026-09-17 17:50", "sl", "haan dhyan rakha. nikal gaya, AWB portal pe hai"),
+        ("2026-09-17 17:52", "cx", "got it, thanks brother"),
     ],
 }

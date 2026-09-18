@@ -7,15 +7,19 @@ someone who has not seen this before.
 
 ## 1. What this is, in one paragraph
 
-Nine drafted WhatsApp conversations between **Chanakya** (the autonomous seller-facing agent
-in the `chanakya` repo) and nine real SourceX sellers, rendered in an ops console. Each
-conversation copies the *shape* of a real, CSAT-rated **Prithvi ↔ customer** conversation —
-its message count, who speaks at every index, and its timestamps — and supplies only the
-words, re-voiced from the customer side to the seller side. They exist as test fixtures:
-realistic material for exercising tone, length, SOP coverage and console rendering without
-touching production.
+Ten drafted WhatsApp threads between **Chanakya** (the autonomous seller-facing agent in the
+`chanakya` repo) and ten real SourceX sellers, rendered in an ops console. Each thread is a
+job rather than a conversation: an order is late, or a payout is blocking one, Chanakya
+chases and negotiates, and it resolves. They run 10 to 16 messages. They exist as test
+fixtures — realistic material for exercising tone, negotiation, SOP coverage and console
+rendering without touching production.
 
 Nothing here was ever sent to anyone.
+
+**These drafts are short on purpose.** An earlier version copied real 31-to-132-message
+customer conversations message-for-message, which produced long coaching sessions that read
+nothing like seller ops. That machinery still exists and still works (§5), but the current
+set is written to the flow: input, negotiation, resolution.
 
 ---
 
@@ -80,51 +84,62 @@ credential is ever written to disk by anything here.
 ## 4. How it fits together
 
 ```
-templates.py      TEMPLATES: {message_count: (source_chat_id, name)}  — 10 skeletons
-                  skeleton(n) -> author/kind/timestamp per index, date-shifted
-                  prefers skeletons.json, falls back to the source report
+chats/cNN.py      one dict per draft: seller, order, `flow`, and `turns`
+                  turns = [(timestamp, who, text), ...]   who: cx | sl | ops
         │
-chats/cNN.py      one dict per draft: which template, which seller, and `texts`
-                  — exactly N strings, one per message slot
-        │
-build.py          marries words to skeleton, FAILS if count or author sequence differs
+build.py          build_turns()  -> free-form drafts (all ten current ones)
+                  build_chat()   -> skeleton-bound drafts (legacy, still supported)
+                  finish_chat()  -> shared tail, derives the console's counters
                   clones shell/page.html, swaps data + a handful of strings
         ▼
         chanakya-seller-chats.html      self-contained, opens over file://
         chats.json                      same payload, for tests
 ```
 
-### The load-bearing idea
+### The flow strip
 
-A draft does not choose its own length or rhythm. It names a real chat and inherits that
-chat's skeleton. `build.py` refuses to build if a draft's text count or declared author
-sequence disagrees with its template, so the claim "same shape as a real conversation" is
-enforced rather than asserted in a comment.
+Each draft carries `flow: {input, action, resolution}`, rendered as an **In → Chanakya →
+Out** bar under the thread header (`FLOW_JS` / `FLOW_CSS` in `build.py`). It exists so a
+reader sees what the thread was for without reading it. If you add a draft, write the flow
+first — if you can't state the resolution in a line, the thread doesn't have one.
 
 ### Dates
 
-One shift for the whole set, computed so the newest message across all templates lands on
-`templates.LATEST` (currently `2026-09-17`). Everything else is each template's own
-calendar, so the threads start six weeks apart and span 10 to 37 days. Change `LATEST` to
-move the whole window; no re-vendoring needed.
+Free-form drafts carry their own timestamps, written into each turn. Nothing is shifted.
+
+### The legacy skeleton path
+
+`templates.py` still holds ten skeletons lifted from real csat-review chats, and
+`build_chat()` still enforces them: a draft declaring `template` + `texts` must match its
+source chat's message count and author sequence exactly, or the build fails. Those drafts
+also get the source report's 30-message selection floor. Free-form drafts skip both.
 
 ---
 
-## 5. Adding a tenth draft
+## 5. Adding a draft
 
-1. Pick a template. `225` is already loaded in `templates.TEMPLATES` with no draft against
-   it (Nikhil Manchewar, src 8371, 225 messages over 21 days). Or add a new entry —
-   `(message_count, (source_chat_id, name))` — and re-run `extract_skeletons.py`.
-2. `python3 build.py --scaffold 225` prints, for every index: who speaks, at what time, what
-   kind of message, and how many characters the real one ran to.
-3. Write `chats/c10.py` following any existing file. Supply `texts` with exactly that many
-   strings, in order, matching the authors in the scaffold. Pick a seller and orders from
-   the real pool (see §6).
+1. Pick a seller and real orders from the pool (§6). The ids must be that seller's.
+2. Write the `flow` first: what came in, what Chanakya does about it, how it ends.
+3. Copy any existing `chats/cNN.py`. Fill `turns` with `(timestamp, who, text)` —
+   `cx` = Chanakya, `sl` = the seller, `ops` = a Seller Ops teammate.
 4. Register it in `chats/__init__.py`.
 5. `python3 build.py && python3 verify_ids.py`. Both must come back clean.
 
-Author codes in the scaffold: `customer` = the seller, `bot` = Chanakya, `human` = a Seller
-Ops teammate.
+**Writing Chanakya.** Lowercase, short, "brother". Never repeat the ask — answer the excuse
+and counter-offer. The levers that work, roughly in order:
+
+- **the seller's own numbers** — reputation score, PDP views, fulfilment rate
+- **what the buyer is worth** — order count, lifetime value, how often they've asked
+- **what waiting costs the seller** — a cancel loses the sale *and* the payout on it
+- **removing the obstacle** — a courier that's working today, a payout unblocked from the
+  backend
+
+**Writing the seller.** Hinglish, terse, lowercase, typos fine. `agle hafte bhejenge`,
+`payout atka hua hai`, `theek hai try karta hu`, `nikal gaya`.
+
+To use the legacy skeleton path instead: `python3 build.py --scaffold 225` prints, for every
+index, who speaks, when, what kind and how long the real message was. The 225 skeleton
+(Nikhil Manchewar, src 8371, 21 days) is loaded with no draft against it.
 
 ---
 
@@ -233,21 +248,29 @@ inside `texts`.
 ## 10. State as of handoff
 
 ```
-9 drafts, 31 to 132 messages, spanning 18 Jul to 17 Sep 2026
+10 drafts, 10 to 16 messages, spanning 11 Sep to 24 Sep 2026
 checks: all clean
 23 SX ids: all real, all attributed to the right seller
-standalone build: verified byte-identical with ~/culture-circle unreachable
+standalone build: verified with ~/culture-circle unreachable
 ```
+
+Coverage: 3 payout threads (2 unmarked-complete, 1 undelivered), 2 bulk follow-ups, 1 X−1
+reminder, 1 RTO reship, 1 reputation/PDP negotiation, 1 high-value-buyer negotiation, 1
+date negotiation. Nine of ten are order-first; all three payout threads resolve into a
+shipment.
 
 Known gaps, none blocking:
 
-- **No tenth draft.** The 225-message skeleton is loaded and unused, so the length spread
-  clears the source's p75 of 86 but not its p90 of 208.
-- **All nine ratings are 4 or 5.** The source is 80% at 4-5, so a faithful sample would
-  include a 3 and perhaps a 1. Deliberate: these were commissioned as positive-tone
-  fixtures.
-- **`chats.json` is not wired into `pytest`.** It is a standalone fixture. Wiring it into
-  the `chanakya` suite as tone or persona assertions would mean touching test files in that
-  repo, which was out of scope.
+- **Ratings are 9 fives and 1 four.** Deliberate: commissioned as positive-tone fixtures.
+  A faithful sample of the source would include a 3 and a 1.
+- **No em dashes**, even though the production screenshots use them. `backend/CLAUDE.md`
+  lists no-em-dash as a seller-copy invariant and the build enforces it. Relaxing it is one
+  line in `build.py` if the invariant is stale.
+- **The word "payout" is a soft violation** in `agent_loop/message_policy.py`, so in
+  production those lines would queue a Slack Approve/Reject card before sending. The drafts
+  show the messages as sent; they do not show the card.
+- **`chats.json` is not wired into `pytest`.** Standalone fixture. Wiring it into the
+  `chanakya` suite would mean touching test files in that repo, which was out of scope.
 - **The overview bar keeps the original's three-column grid** with one tile in it, so there
   is empty space to its right.
+- **The 225-message skeleton is loaded and unused** in `templates.py`.

@@ -126,7 +126,9 @@ def main():
     bad, rows = [], []
     for d in DRAFTS:
         wa = msisdn(d["wa"])
-        blob = "\n".join(list(d["texts"]) + [d["sx"], d["order_note"]])
+        # drafts carry either free-form `turns` or skeleton-bound `texts`
+        words = ([t for _, _, t in d["turns"]] if "turns" in d else list(d["texts"]))
+        blob = "\n".join(words + [d["sx"], d["order_note"]])
         for i in sorted(set(SX.findall(blob))):
             where = [t for t, s in pools.items() if i in s]
             own = owners.get(i, set())

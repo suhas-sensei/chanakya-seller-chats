@@ -1,139 +1,114 @@
-# Chanakya seller chats — drafts in the csat-review console
+# Chanakya seller chats — order-chasing drafts
 
-Nine drafted Chanakya ↔ seller conversations. Each one **copies a named real chat** from
-`~/culture-circle/local-reports/csat-review.html` — its message count, its author at every
-index, its kinds and its timestamps — and supplies only the words. Rendered in that file's
-own UI.
+Ten drafted WhatsApp threads between **Chanakya** and real SourceX sellers, rendered in the
+csat-review ops console.
+
+These are jobs, not conversations. An order is late, or a payout is blocking one. Chanakya
+chases, negotiates, and it resolves. They run **10 to 16 messages** because that is how long
+the real thing takes.
 
 ```bash
-python3 build.py                 # rebuild both outputs, run every check
-python3 build.py --scaffold 55   # per-index authoring scaffold for a template
-python3 verify_ids.py            # check every SX id is real and owned by that seller
-open chanakya-seller-chats.html  # file:// is fine, nothing is fetched
+python3 build.py                 # rebuild the page + JSON, run every check
+python3 verify_ids.py            # every SX id real, and owned by the right seller
+open chanakya-seller-chats.html
 ```
 
-| file | what it is |
-|---|---|
-| `templates.py` | the ten skeletons lifted from real rated chats, and the date shift |
-| `chats/cNN.py` | one draft each: which chat it copies, the seller, the words |
-| `build.py` | clones the csat-review shell, marries words to skeletons, validates |
-| `verify_ids.py` | proves every SX id exists and belongs to the seller it's used against |
-| `chanakya-seller-chats.html` | the output console, self-contained, 0.60 MB |
-| `chats.json` | the same payload for test use |
+## What each thread does
 
-## Length and rhythm are copied, not invented
+Every thread carries an **In → Chanakya → Out** strip under the header, so the shape reads
+without scrolling the transcript.
 
-`build.py` fails the build if a draft's text count or author sequence disagrees with its
-template. So this table is enforced, not claimed:
+| # | seller | msgs | what it is |
+|---|---|---|---|
+| c01 | Dipanshu | 11 | RTO reship. Seller stalls to tomorrow, Chanakya gives him a courier that's working today plus the reputation cost of waiting |
+| c02 | ELITE FINDS | 12 | Reputation score 94 → 87 and PDP views down 31%. The seller's own numbers are the lever |
+| c03 | Elvara | 14 | ₹28k Prada, buyer has ordered 9 times. Payout cleared first, then traded on lifetime value |
+| c04 | Mindyourkicks | 16 | **Payout: order never marked complete.** Fixed from the backend, confirmed 3 days later, then moved to the open order |
+| c05 | Manan | 14 | **Payout: customer hasn't received delivery yet.** The clock starts at delivery, not dispatch |
+| c06 | Delicc Enterprises | 11 | **Bulk follow-up.** Five orders due the same day, clubbed into one message |
+| c07 | DJ1 | 10 | **X−1 reminder.** Seller commits to the 24th, Chanakya lands on the 23rd |
+| c08 | TopGun | 11 | "Next week" negotiated down to a date the seller picks himself |
+| c09 | Sneak Drip | 15 | Payout used as the reason not to ship. Money cleared, then the order argued out of the queue anyway |
+| c10 | DS.WT | 13 | Bulk follow-up with a ₹23k exception chased to a 9pm answer |
 
-Ordered oldest first, the way the modal lists them:
+Nine of ten are order-first. The three payout threads all resolve into a shipment, because
+that is the point of fixing the payout.
 
-| draft | seller | msgs | seller / Chanakya / staff | runs from | span | active | run | copied from |
-|---|---|---|---|---|---|---|---|---|
-| 006 | Delicc Enterprises | 55 | 28 / 27 / 0 | 18 Jul → 2 Aug | 16d | 8 | 4 | Muslim altaf Khan (5, agentic) |
-| 009 | Mindyourkicks | 132 | 73 / 16 / 43 | 27 Jul → 1 Sep | 37d | 18 | 13 | Ananya Tambe (5, human) |
-| 007 | ELITE FINDS | 67 | 33 / 29 / 5 | 5 Aug → 3 Sep | 30d | 15 | 4 | Vikas Garg (4, human) |
-| 005 | Sneak Drip | 50 | 23 / 15 / 12 | 10 Aug → 27 Aug | 18d | 8 | 7 | Dhananjoy Das (5, human) |
-| 004 | DJ1 | 42 | 25 / 15 / 2 | 15 Aug → 27 Aug | 13d | 6 | 7 | Uthpala H v (4, agentic) |
-| 001 | TopGun | 31 | 12 / 13 / 6 | 17 Aug → 31 Aug | 15d | 5 | 6 | Achintya Singh (5, agentic) |
-| 003 | Hypestreet India | 36 | 16 / 14 / 6 | 17 Aug → 17 Sep | 32d | 6 | 6 | Viraj . (5, agentic) |
-| 008 | DS.WT | 84 | 50 / 8 / 26 | 17 Aug → 3 Sep | 18d | 10 | 10 | ANUJMAGO (4, agentic) |
-| 002 | Elvara | 32 | 15 / 17 / 0 | 29 Aug → 7 Sep | 10d | 5 | 2 | Vivaan Agarwal (4, agentic) |
+## How Chanakya sounds
 
-**Dates are staggered because the source's are.** One shift is applied to the whole set,
-computed so the newest message across all templates lands on `templates.LATEST`
-(2026-09-17). Everything else is the template's own calendar: each thread keeps its real
-start date, its real end date and every gap in between. An earlier version anchored each
-template's *first* day to a common date, which preserved each thread's internal span but
-threw the stagger away, so all nine opened on the same morning and the sidebar read as one
-batch. They now start six weeks apart, span 10 to 37 calendar days, and are active on 5 to
-18 of them.
+Lifted from the production screenshots: lowercase, short, "brother", no throat-clearing,
+and a counter-offer rather than a request.
 
-The nine templates were picked off a profile of all 500 source chats to spread the axes
-that actually vary, so no two drafts read alike:
+> why tomorrow, please do it today customer already is anxious
 
-- **length** 31 → 132 messages
-- **who talks** 13 Chanakya replies against 12 seller messages (001) → 8 against 50 (008)
-- **verbosity** Chanakya's median reply 37 chars (003) → 291 chars (006)
-- **burstiness** clean alternating turns (002, run of 2) → 13 unanswered in a row (009)
-- **duration** a 10-day thread (002) → a 37-day one (009)
-- **when** starts spread from 18 July to 29 August, ends from 2 August to 17 September
-- **who carries it** bot alone (002, 006) → a teammate writing 43 of 132 messages (009)
-- **how it ends** a warm sign-off, a rating with nothing after it (006), or the seller
-  talking into silence three days later (003)
+> 10 other sellers used delhivery today because of the same issue, can you just try
+> delhivery and see if works? but please reship today, it will help with your seller
+> reputation score massively
 
-Source shape for comparison: floor 30 messages with 8 each side, p25 38, median 51, p75 86,
-p90 208. This set clears p75 and stops short of the p90 tail — the 225-message skeleton
-(Nikhil Manchewar, src 8371) is loaded in `templates.py` but has no draft written against
-it.
+> brother if you hold it till monday its 12 days and it becomes a cancel. then you lose the
+> sale and the payout on it. ship tomorrow and ill make sure monday lands
 
-Ratings: 5 fives and 4 fours. The source is 80% at 4 or 5, which is where "the tone is
-positive" comes from.
+The negotiation levers, in order of how often they land: **reputation score and PDP views**,
+**what the buyer is worth**, **what the delay actually costs the seller**, and **a courier
+that is working right now**. Chanakya never just repeats the ask.
 
-## The UI is the old file, not a lookalike
+Sellers answer the way they actually do: `agle hafte bhejenge`, `payout atka hua hai`,
+`i'll reship tomorrow`, `tirupati shipment isnt working today`.
 
-`build.py` reads `csat-review.html` and lifts its three `<style>` blocks, its bundled
-lucide icons and its 160-line renderer **verbatim**. Swapped: the two JSON payloads, the
-avatar map (regenerated for these sellers, same SVG shape), and `Prithvi`→`Chanakya`,
-`On customer`→`On seller`, `Agentic CSAT`→`Chanakya CSAT`, the title, the search
-placeholder. Every lifted string is asserted, so if the source report changes the build
-fails loudly instead of half-patching.
+## Payout handling
 
-Deliberate deviations, each documented at the point of change:
+Two cases, in the proportion they actually occur:
 
-- **The SX order id sits in the thread header**, beside the cohort and message count. On
-  this lane it's the only id anyone can act on, and it's what the search box asks for. The
-  multi-order threads list all of them (draft 006 carries five) and still fit without
-  overflow at 1440px and at 390px.
-- **The Human-attributed and NPS tiles are removed**, leaving Chanakya CSAT. They're cut
-  from the shell rather than hidden so nothing renders an empty box, and the two renderer
-  lines that wrote into them are guarded — everything they compute still feeds
-  `#length-summary` in the details modal.
+1. **Not marked complete** (c03, c04, c09 — the majority). The seller never closed the
+   delivered order, so the payout never released. Chanakya says the line and fixes it:
+   *"dont worry, ill get it marked complete from the backend and your payout will be
+   processed"*.
+2. **Customer hasn't received it yet** (c05). Nothing is broken; the seller just thinks the
+   clock starts at dispatch.
 
-- **An opener for `#method-modal`.** In the source nothing ever opens it: the renderer
-  fills its `#method-totals`, `#length-summary` and `#snapshot` and only calls
-  `showModal()` on the image lightbox, so that copy is computed and unreachable. This
-  page's modal carries the "these are drafts, not transcripts" statement and the table of
-  what each draft copies, so it gets an info button beside the existing jump button using
-  the original's own `icon-button` pattern.
-- **An empty cohort reads "Not recorded"** rather than `--/ 5`.
+c04 is the full arc the flow is meant to have: problem → backend fix → **Chanakya comes back
+three days later** to confirm the money landed → then the open shipment. One continued
+relationship, not three tickets.
 
-Media turns keep their kind, so the original's own "Image / Not embedded" chip appears
-above the caption — no bytes travel with these drafts.
+## Follow-up behaviour
 
-## Identifiers are real; the words are written
+- Seller commits to date X → Chanakya lands on **X−1**, and asks to hear about a slip *the
+  night before*, not on the evening of.
+- Several orders due the same day → **one message listing 2 to 6 of them**, then only the
+  exception gets split out. Five separate chases get one reply and four ignored messages.
 
-`verify_ids.py` scrapes every `SX\d{6}` out of the drafts and checks it against the ids
-that exist in Chanakya's own data, then checks ownership:
+## Data
+
+Every SX id, seller number, store name, product, price, date and reliability stat is real,
+read GET-only from Chanakya's Supabase. `verify_ids.py` proves each id exists **and belongs
+to the seller it's used against**:
 
 ```
-23 id/draft pairs across 9 drafts
+23 id/draft pairs across 10 drafts
 all ids real and attributed to the right seller
 ```
 
-Pools are `urgent_pushes.sx_legacy_id` (777), `size_exchanges.sx_order_legacy_id` (193)
-and ids already named to a seller in `messages.body` (378) — union 1,007, with the owning
-seller known for 970. Comparison normalises to the last ten digits, because
-`urgent_pushes.seller_wa` sometimes drops the country code that `sellers.wa_number` keeps.
+Chanakya's sender is **+91 92176 76103** (verified name Rajiv, GREEN). The words are
+written. Nothing here was sent.
 
-Store names, reliability stats, products, prices, required-by dates and return addresses
-come from the same read-only pull. Chanakya's sender is **+91 92176 76103** (verified name
-Rajiv, quality GREEN) from the Meta Graph API. The message text is drafted. Nothing here
-was sent to anyone and no credential is stored in this directory.
+## The UI
+
+The renderer, CSS and markup are lifted verbatim from `csat-review.html`, vendored into
+`shell/page.html` with all customer data stripped, so the repo builds standalone. Changes:
+labels (`Prithvi`→`Chanakya`, `On customer`→`On seller`), the SX id in the thread header,
+the Human-attributed and NPS tiles removed, an opener for the details modal (unreachable in
+the original), and the **In → Chanakya → Out** strip.
 
 ## Checks the build enforces
 
-Build fails and names the offender on any of:
-
-- text count or author sequence not matching the declared template
-- fewer than 30 messages, 8 seller, 8 support, or 4 seller messages of 20+ chars
 - a seller-facing message over 1200 chars, or containing markdown
-  (`agent_loop/message_policy.py`)
-- an em dash in seller copy, or a 14-digit string that looks like a CC order number
-  (`lcr.check_seller_copy` is what this mirrors — SX ids only)
+- an em dash in seller copy
+- a bare 14-digit number that reads as a customer's CC order id — AWBs are allowed, because
+  they're the same shape and are fine to send
+- SX ids only, mirroring `lcr.check_seller_copy`
 
-Draft 005 mentions a payout, which `message_policy.py` treats as a **soft** violation, so
-the transcript shows the Slack Approve/Reject card firing and being approved before the
-line goes out. Drafts 005, 007 and 009 copy human-cohort templates and are marked human;
-008 has a teammate writing 26 of its 84 messages and stays agentic, because its terminal
-rating carries no human attribution — the source's own rule.
+`build.py` also still supports the older skeleton format (`template` + `texts`), where a
+draft copies a real csat-review chat message-for-message. The 30-message selection floor
+only binds those drafts; the order-chasing threads set their own length.
+
+See `HANDOFF.md` for the full build, extend and verify guide.

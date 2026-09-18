@@ -4,3 +4,4 @@ __pycache__/
 # Local cache written by verify_ids.py: ~1,000 real SX order ids paired with their owning
 # seller's phone number. Regenerate with `python3 verify_ids.py --refresh`.
 .id-pools.json
+.gstack/

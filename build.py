@@ -87,6 +87,32 @@ def avatar(wa):
     return "data:image/svg+xml;base64," + base64.b64encode(svg.encode()).decode()
 
 
+WHO = {"cx": "bot", "sl": "customer", "ops": "human"}
+
+
+def build_turns(d, index):
+    """A free-form draft: explicit (timestamp, who, text) turns, no skeleton.
+
+    These are the order-chasing threads. They are short and transactional on purpose,
+    because the job is input -> negotiation -> resolution rather than a conversation.
+    A skeleton copied off a 132-message customer chat is the wrong shape for that, so
+    these drafts set their own length.
+    """
+    msgs = []
+    for i, (at, who, text) in enumerate(d["turns"]):
+        if who not in WHO:
+            raise SystemExit(f'{d["file"]} turn {i}: unknown speaker {who!r}')
+        author = WHO[who]
+        msgs.append({
+            "id": d["id"] * 1000 + i, "author": author, "kind": "text",
+            "role": "assistant", "text": text,
+            "created_at": f"{at}:00+05:30", "media_id": None,
+            "operator_name": d.get("operator", "Seller Ops") if author == "human" else None,
+            "interactive": None,
+        })
+    return finish_chat(d, index, msgs, template=None)
+
+
 def build_chat(d, index):
     """Marry one draft's words to its template's skeleton. Raises on any mismatch."""
     t = templates.skeleton(d["template"])
@@ -129,6 +155,11 @@ def build_chat(d, index):
             m["interactive"] = {"type": shape, "body": {"text": text}, "rows": rows}
         msgs.append(m)
 
+    return finish_chat(d, index, msgs, t)
+
+
+def finish_chat(d, index, msgs, template):
+    """Shared tail: derive the console's counters from the built messages."""
     seller = [m for m in msgs if m["author"] == "customer"]
     support = [m for m in msgs if m["author"] in ("bot", "human")]
     human = [m for m in msgs if m["author"] == "human"]
@@ -139,6 +170,10 @@ def build_chat(d, index):
     if d.get("nps") is not None:
         nps = {"id": d["id"], "score": d["nps"], "asked_at": csat_at,
                "answered_at": csat_at, "trigger": "feedback"}
+    t = template
+    days = sorted({m["created_at"][:10] for m in msgs})
+    from datetime import date as _date
+    span = (_date.fromisoformat(days[-1]) - _date.fromisoformat(days[0])).days + 1
 
     return {
         "id": d["id"], "customer_id": d["wa"], "score": d["score"],
@@ -158,11 +193,19 @@ def build_chat(d, index):
         # seller-console extras, surfaced in the details modal
         "sop": d["sop"], "sx": d["sx"], "seller_note": d["seller_note"],
         "order_note": d["order_note"],
-        "template": {"n": t["n"], "src_id": t["src_id"], "src_name": t["src_name"],
-                     "src_score": t["src_score"], "src_cohort": t["src_cohort"],
-                     "days": t["days"], "starts": t["starts"], "ends": t["ends"],
-                     "span_days": t["span_days"],
-                     "src_starts": t["src_starts"], "src_ends": t["src_ends"]},
+        # what came in, what Chanakya did about it, how it ended. Rendered as a strip
+        # under the thread header so a reader sees the shape without reading the thread.
+        "flow": d.get("flow"),
+        "template": ({"n": t["n"], "src_id": t["src_id"], "src_name": t["src_name"],
+                      "src_score": t["src_score"], "src_cohort": t["src_cohort"],
+                      "days": t["days"], "starts": t["starts"], "ends": t["ends"],
+                      "span_days": t["span_days"],
+                      "src_starts": t["src_starts"], "src_ends": t["src_ends"]}
+                     if t else
+                     {"n": len(msgs), "src_id": None, "src_name": "written to the flow",
+                      "src_score": None, "src_cohort": "agentic",
+                      "days": len(days), "starts": days[0], "ends": days[-1],
+                      "span_days": span, "src_starts": None, "src_ends": None}),
     }
 
 
@@ -215,13 +258,41 @@ RENDER_SUBS = [
     ("Recorded NPS is available for ${recordedNps.length} of ${data.chats.length} customers",
      "Recorded NPS is available for ${recordedNps.length} of ${data.chats.length} sellers"),
     # The seller's SX order id belongs in the thread header. On this lane it's the only id
-    # anyone can act on, and it's what the search box asks you for.
+    # anyone can act on, and it's what the search box asks you for. The flow strip goes
+    # here too: these threads are a job, not a conversation, so what came in, what Chanakya
+    # did and how it ended should be readable without scrolling the transcript.
     ("<p>${groupName(c.cohort)} &middot; ${c.messages.length.toLocaleString('en-IN')} "
      "messages</p>",
      "<p><b style=\"color:var(--ink);font-weight:600\">${escapeHTML(c.sx)}</b>"
-     " &middot; ${groupName(c.cohort)} &middot; "
-     "${c.messages.length.toLocaleString('en-IN')} messages</p>"),
+     " &middot; ${c.messages.length.toLocaleString('en-IN')} messages</p>"),
+    ("</div>`;\n $('back').onclick=",
+     "</div>${flowStrip(c)}`;\n $('back').onclick="),
 ]
+
+# Injected ahead of the renderer. Uses the page's own variables so it themes with
+# everything else.
+FLOW_JS = """
+function flowStrip(c){
+ if(!c.flow) return '';
+ const cell=(k,v)=>`<div class="flow-cell"><div class="flow-k">${k}</div>`
+   +`<div class="flow-v">${escapeHTML(v)}</div></div>`;
+ return `<div class="flow">${cell('In',c.flow.input)}${cell('Chanakya',c.flow.action)}`
+   +`${cell('Out',c.flow.resolution)}</div>`;
+}
+"""
+
+FLOW_CSS = """
+.thread-head{flex-wrap:wrap}
+.flow{flex-basis:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:1px;margin:12px 0 0;background:var(--line);border:1px solid var(--line);
+ border-radius:8px;overflow:hidden}
+.flow-cell{background:var(--bg);padding:8px 11px;min-width:0}
+.flow-k{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+ margin-bottom:3px}
+.flow-v{font-size:12px;line-height:1.45;color:var(--ink)}
+.flow-cell:nth-child(3) .flow-v{color:var(--accent,#1f6f4f)}
+@media(max-width:640px){.flow{grid-template-columns:1fr}}
+"""
 
 # The two tiles the seller console has no use for. Removed from the shell rather than
 # hidden, so nothing renders an empty box.
@@ -310,7 +381,8 @@ def main():
         assert old in render, f"renderer string not found, source changed: {old[:60]}"
         render = render.replace(old, new)
 
-    chats = [build_chat(d, i) for i, d in enumerate(DRAFTS)]
+    chats = [(build_turns(d, i) if "turns" in d else build_chat(d, i))
+             for i, d in enumerate(DRAFTS)]
     payload = {
         "generated_at": max(c["messages"][-1]["created_at"] for c in chats),
         "chats": chats, "media": {},
@@ -345,7 +417,9 @@ def main():
                   lambda m: m.group(1) + json.dumps(row_badges(chats)) + m.group(2),
                   html, flags=re.S)
     html = html.replace(old_render,
-                        "\nconst customerAvatars=" + json.dumps(avatars) + ";\n" + render)
+                        "\nconst customerAvatars=" + json.dumps(avatars) + ";\n"
+                        + FLOW_JS + render)
+    html = html.replace("</head>", f"<style>{FLOW_CSS}</style></head>")
     html = html.replace("<title>prvithi transcripts</title>",
                         "<title>Chanakya seller transcripts</title>")
     html = html.replace("On customer <span", "On seller <span")
@@ -403,14 +477,21 @@ def main():
               f'{best:>3} {med(sl):>4} {med(cx):>4} {c["score"]:>4}  '
               f'{t["starts"]} to {t["ends"]}  {t["span_days"]:>4}  {t["days"]:>4}')
 
-        if c["message_count"] < SOURCE_SHAPE["min_messages"]:
-            bad.append(f'{c["label"]} {c["message_count"]} messages, floor 30')
-        if c["customer_count"] < 8:
-            bad.append(f'{c["label"]} {c["customer_count"]} seller messages, floor 8')
-        if c["support_count"] < 8:
-            bad.append(f'{c["label"]} {c["support_count"]} support messages, floor 8')
-        if c["substantive_customer"] < 4:
-            bad.append(f'{c["label"]} {c["substantive_customer"]} substantive, floor 4')
+        # The 30-message floor is the csat-review report's own selection rule, so it only
+        # binds drafts that copy one of its chats. The order-chasing threads are short
+        # deliberately: the job is input, negotiation, resolution, and padding that out to
+        # 30 messages would make them worse, not more faithful.
+        if c["template"]["src_id"] is not None:
+            if c["message_count"] < SOURCE_SHAPE["min_messages"]:
+                bad.append(f'{c["label"]} {c["message_count"]} messages, floor 30')
+            if c["customer_count"] < 8:
+                bad.append(f'{c["label"]} {c["customer_count"]} seller messages, floor 8')
+            if c["support_count"] < 8:
+                bad.append(f'{c["label"]} {c["support_count"]} support messages, floor 8')
+            if c["substantive_customer"] < 4:
+                bad.append(f'{c["label"]} {c["substantive_customer"]} substantive, floor 4')
+        elif c["message_count"] < 6:
+            bad.append(f'{c["label"]} only {c["message_count"]} messages, too thin to read')
         for m in ms:
             if m["author"] not in ("bot", "human") or not m["text"]:
                 continue
@@ -421,8 +502,14 @@ def main():
                 bad.append(f'{c["label"]} {m["created_at"][:16]} em dash in seller copy')
             if re.search(r"\*\*|__|```|^#{1,6} ", t, re.M):
                 bad.append(f'{c["label"]} {m["created_at"][:16]} markdown in seller copy')
-            if re.search(r"\b\d{14}\b", t):
-                bad.append(f'{c["label"]} {m["created_at"][:16]} looks like a CC order id')
+            # A bare 14-digit run is what a customer's CC order number looks like, and that
+            # must never reach a seller. A courier AWB is the same shape and is perfectly
+            # fine to send, so only flag digits that are NOT introduced as an AWB.
+            for hit in re.finditer(r"\b\d{14}\b", t):
+                lead = t[max(0, hit.start() - 24):hit.start()].lower()
+                if "awb" not in lead and "tracking" not in lead:
+                    bad.append(f'{c["label"]} {m["created_at"][:16]} bare 14-digit number, '
+                               f"reads as a CC order id: {hit.group()}")
 
     lens = sorted(c["message_count"] for c in chats)
     print(f'\nlength spread: {lens}')
